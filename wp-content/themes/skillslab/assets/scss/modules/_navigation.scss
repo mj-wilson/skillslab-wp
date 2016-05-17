@@ -176,6 +176,7 @@
                 padding: 12px 20px 8px;
                 letter-spacing: 0;
                 line-height: 1;
+                border:none;
                 &:hover {
                   color:$gray;
                 }
@@ -202,6 +203,9 @@
                   }
                 }
               }
+              &.current-menu-item a {
+                color: $blue;
+              }
             }
           }
         }
@@ -210,6 +214,8 @@
           .mobile-nav-toggle {
             position: fixed;
             height: 20px;
+            right: 13px;
+            top: 25px;
             span {
                 position: relative;
             }

@@ -122,14 +122,22 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 32,
-    'h2': 20,
+    'h1': 18,
+    'h2': 14,
     'h3': 19,
-    'h4': 18,
+    'h4': 16,
     'h5': 17,
     'h6': 16,
   ),
   medium: (
+    'h1': 24,
+    'h2': 16,
+    'h3': 31,
+    'h4': 18,
+    'h5': 20,
+    'h6': 16,
+  ),
+  large: (
     'h1': 32,
     'h2': 20,
     'h3': 31,

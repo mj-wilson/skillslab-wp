@@ -1,0 +1,326 @@
+@media all and (max-width: 1024px) {
+
+
+#home-hero {
+	.headline {
+		padding: rem-calc(75 25);
+		left: 0;
+		br {
+			display: none;
+		}
+	}
+}
+.section .centered h1 {
+    font-size: 24px;
+}
+#schools-partners, #details {
+	.col-holder {
+		.quarter {
+			width: 50%;
+			padding: 0 rem-calc(15 20);
+			.stats {
+				padding: rem-calc(10 0 0);
+				display: flex; 
+				.number {
+					font-size: 50px;
+					span {
+						top: -15px;
+					}
+				}
+				.text {
+					span {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+}
+ #details {
+ 	.col-holder {
+		display: flex;
+		flex-wrap: wrap;
+		.quarter {
+			width: 50%;
+			padding: rem-calc(20);
+			&:first-child, &:nth-child(3) {
+				border:none;
+			}
+			&:nth-child(3), &:nth-child(4) {
+				border-top: 1px solid $light-gray;
+			}
+			img {
+				max-height: 80px;
+			}
+		}
+	}
+ }
+#about {
+	.left {
+		float: none;
+		width: 100%;
+	}
+	.right {
+		float: none;
+		width: 100%;
+	}
+}
+#partner {
+	.col-holder {
+		padding: 0;
+	}
+}
+#social-feed {
+	.centered {
+		h3 {
+			font-size: 20px;
+		}
+		.kebo-tweets.list {
+			.ktweet {
+				width: 48%;
+			}
+		}
+		
+	}
+}
+
+
+/* end max-width 1024 */
+}
+
+
+
+@media all and (max-width: 768px) {
+
+.infographic {
+	h3 {
+		font-size: 22px;
+	}
+	.top {
+		.third {
+			width: 50%;
+			padding: rem-calc(0 10 0 0);
+			p {
+				font-size: 14px;
+			}
+			&.middle {
+				display: none;
+			}
+		}
+	}
+	.green-bubble {
+		p {
+			font-size: 13px;
+		}
+	}
+	.bottom {
+		padding-top: rem-calc(20);
+		.mobile-only {
+			display: block;
+		}
+		.half {
+			width: 50%;
+			float: left;
+			padding: 0 rem-calc(20) 0 0;
+			.green-bubble {
+				&:after {
+				    right: 20px;
+				}
+
+			}
+
+			&.right {
+				padding: 0 0 0	rem-calc(20);
+				.green-bubble {
+					&:after {
+					    left: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+#partner {
+	.col-holder {
+		padding: 0;
+		.quarter {
+			width: 100%;
+			float:none;
+			text-align: left;
+			padding: rem-calc(0 0 30);
+			.logo-image {
+				width: 49%;
+				max-width: 100%;
+				height: auto;
+				display: inline-block;
+				margin:0;
+				padding-right: 20px;
+				text-align: right;
+				img {
+					max-width: 120px;
+					max-height: 100px;
+				}
+			}
+			h6 {
+				font-size: rem-calc(16);
+				display: inline-block;
+				vertical-align: middle;
+				width: 49%;
+				padding-top: 5px;
+			}
+		}
+
+	}
+}
+#about {
+	.left {
+		padding-right: 0;
+	}
+	.right {
+		padding-right: 25px;
+	}
+}
+
+
+/* end max-width 768 */
+}
+
+
+
+@media all and (max-width: 520px) {
+
+#schools-partners {
+	.col-holder {
+		display: block;
+		.quarter {
+			width: 100%;
+			padding: rem-calc(0 0 20);
+		}
+	}
+}
+#details {
+ 	.col-holder {
+		display: block;
+		.quarter {
+			width: 100%;
+			padding: rem-calc(20 0);
+			border-left: none;
+			border-top: 1px solid $light-gray;
+			
+			&:first-child {
+				border:none;
+				padding-top: 0;
+			
+			}
+			img {
+				max-height: 80px;
+			}
+		}
+	}
+	
+}
+
+/* end max-width 520 */
+}
+
+
+
+@media all and (max-width: 480px) {
+
+.infographic {
+	h3 {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	.top {
+		.third {
+			width: 100%;
+			padding: rem-calc(0 0 15 0);
+		}
+	}
+	.green-bubble {
+		padding: rem-calc(20 20 25);
+	}
+	.bottom {
+		padding-top: rem-calc(20);
+		.mobile-only {
+			display: block;
+		}
+		.half {
+			width: 50%;
+			padding: 0 rem-calc(5) 0 0;
+			.green-bubble {
+				&:after {
+				    right: 50px;
+				}
+
+			}
+
+			&.right {
+				padding: 0 0 0	rem-calc(5);
+				.green-bubble {
+					&:after {
+					    left: 50px;
+					}
+				}
+			}
+		}
+	}
+}
+#goals {
+	ul {
+		max-width: rem-calc(800);
+		margin: auto;
+		list-style: none;
+		li {
+			width: 100%;
+			text-align: left;
+			display: block;
+			vertical-align: top;
+			padding: rem-calc(0 15 25 45);
+			position: relative;
+			font-size: rem-calc(14);
+			line-height: 1.5em;
+			font-weight: 600;
+			&:before {
+				content:"\f00c";
+				font: normal normal normal 20px/30px FontAwesome;
+				display: block;
+				position: absolute;
+				left:0;
+				top:0px;
+				width: rem-calc(30);
+				height: rem-calc(30);
+				background: $green;
+				text-align: center;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+#social-feed {
+	.centered {
+		h3 {
+			font-size: 18px;
+			.tweet-icon {
+				display: block;
+				margin: 0 auto rem-calc(20px);
+				
+			}
+		}
+		.kebo-tweets.list {
+			.ktweet {
+				width: 98%;
+				margin-bottom: 10px;
+			}
+		}
+		
+	}
+}
+
+
+
+
+/* end max-width 480 */
+}

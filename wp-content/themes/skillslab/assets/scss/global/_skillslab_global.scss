@@ -126,6 +126,7 @@ h1 {
 			svg {
 				display: block;
 				margin: auto;
+				max-width: 100%;
 				.not {
 				    -webkit-animation: flash 1s infinite alternate;
 				    -moz-animation: flash 1s infinite alternate;
@@ -204,6 +205,9 @@ h1 {
 		}
 	}
 	.bottom {
+		.mobile-only {
+			display: none;
+		}
 		.half {
 			width: 50%;
 			float: left;
@@ -410,7 +414,6 @@ h1 {
 	color: #fff;
 	h1 {
 		color: #fff;
-		font-size: 30px;
 		text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 		margin: rem-calc(0 0 30);
 	}
@@ -547,10 +550,7 @@ a.standalone-link {
 #social-feed {
 	background: url(../images/geo.jpg) top center repeat;
 	background-size: 160px auto;
-	.left {
-		float: left;
-		text-align: left;
-		width: 75%;
+	.centered {
 		h3 {
 			color: $dark-gray;
 			font-size: 26px;
@@ -558,102 +558,93 @@ a.standalone-link {
 			text-transform: uppercase;
 			line-height: 1em;
 			letter-spacing: 0.04em;
-			&:before {
-				content: "\f16d";
-				font: normal normal normal 28px/1em FontAwesome;
-				color: #bababa;
+			margin: 0 0 rem-calc(30);
+			span {
+				font-family: $serif-font;
+				text-transform: none;
+				font-style: italic;
+				letter-spacing: 0;
+			}
+			.tweet-icon {
 				display: inline-block;
 				margin: rem-calc(0 10px 0 0);
 				position: relative;
-				top: -1px;
-
-			}
-		}
-	}
-	.right {
-		float: right;
-		width: 25%;
-		.latest-tweets {
-			background: #fff;
-			padding: rem-calc(20);
-			color: $gray;
-			position: relative;
-			box-shadow: 0px 2px 12px 1px rgba(0,0,0,0.2);
-			h4	{
-				font-family: $serif-font;
-				font-style: italic;
-				font-weight: bold;
-				color: inherit;
-				font-size: 18px;
-				color: $gray;	
-				border-bottom: 1px solid rgba(0,0,0,0.2);
-				padding: 0 0 rem-calc(10);
-				margin: 0;
-				span {
-					font-family: $skinny-font;
-					font-weight: 300;
-					font-size: 16px;
-					text-transform: uppercase;
-					font-style: normal;
-				}			
-			}
-			.tweet-icon {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background: #fff;
 				text-align: center;
-				padding: rem-calc(0 0 5);
+				box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
 				i {
 					font-size: 30px;
+					line-height: 40px;
 					color: #a9d5f6;
-				}
-			}
-			.ktweets-title {
-				display: none;
-			}
-			.kebo-tweets.list {
-				color: $gray;
-				font-size: 11px;
-				line-height: 1.3em;
-				.ktweet {
-					padding: rem-calc(15 0 12 0);
-					.kmeta a {
-						float:none;
-						color: $blue;
-						font-weight: 700;
-						text-transform: uppercase;
-						font-size: 11px;
-						text-decoration: underline;
-						line-height: 1em;
-						padding: 0 0 2px;
-						&.kdate {
-							border-left: 1px solid $blue;
-							padding-left: 5px;
-							margin: 0 0 0 3px;
-						}
-					}
-					.ktext {
-						min-height: 10px;
-						a {
-							color: inherit;
-							font-weight: 700;
-							text-decoration: underline;
-						}
-					}
-					.kfooter {
-						padding-top: 10px;
-						a.ktogglemedia {
-							color: #fff;
-							background: #aaa;
-							text-transform: uppercase;
-							font-size: 10px;
-							line-height: 16px;
-							padding: 0 5px;
-							margin-top: 0;
-							font-weight: 600;
-						}
 
-					}
 				}
 			}
 		}
+	
+		.ktweets-title {
+			display: none;
+		}
+		.kebo-tweets.list {
+			color: $gray;
+			font-size: 11px;
+			line-height: 1.3em;
+			display: flex;
+  			flex-wrap: wrap;
+
+			.ktweet {
+				padding: rem-calc(15 0 12 0);
+				background: #fff;
+				padding: rem-calc(20);
+				position: relative;
+				box-shadow: 0px 2px 12px 1px rgba(0,0,0,0.2);
+				width: 23%;
+				margin: 1%;
+				display: inline-block;
+				vertical-align: top;
+
+				.kmeta a {
+					float:none;
+					color: $blue;
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 11px;
+					text-decoration: underline;
+					line-height: 1em;
+					padding: 0 0 2px;
+					&.kdate {
+						border-left: 1px solid $blue;
+						padding-left: 5px;
+						margin: 0 0 0 3px;
+					}
+				}
+				.ktext {
+					min-height: 10px;
+					a {
+						color: inherit;
+						font-weight: 700;
+						text-decoration: underline;
+					}
+				}
+				.kfooter {
+					padding-top: 10px;
+					a.ktogglemedia {
+						color: #fff;
+						background: #aaa;
+						text-transform: uppercase;
+						font-size: 10px;
+						line-height: 16px;
+						padding: 0 5px;
+						margin-top: 0;
+						font-weight: 600;
+					}
+
+				}
+			}
+		}
+		
 	}
 }
 .page-template-about {

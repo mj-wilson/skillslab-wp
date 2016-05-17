@@ -47,6 +47,14 @@ get_header(); ?>
 					
 				</div>
 				<div class="bottom clear">
+					<div class="mobile-only">
+						<div class="green-bubble">
+							<p>Convening teachers and their partners in collaborative task design and professional learning sessions</p>
+						</div>
+						<div class="drivers">
+							<h3>DRIVERS</h3>
+						</div>						
+					</div>
 					<div class="half left">
 						<div class="green-bubble">
 							<p>Providing resources to fund local change ideas and innovation strategies</p>

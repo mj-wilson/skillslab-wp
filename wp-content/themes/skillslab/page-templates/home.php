@@ -49,6 +49,15 @@ get_header(); ?>
 					
 				</div>
 				<div class="bottom clear">
+					<div class="mobile-only">
+						<div class="green-bubble">
+							<p>Convening teachers and their partners in collaborative task design and professional learning sessions</p>
+						</div>
+						<div class="drivers">
+							<h3>DRIVERS</h3>
+						</div>						
+					</div>
+
 					<div class="half left">
 						<div class="green-bubble">
 							<p>Providing resources to fund local change ideas and innovation strategies</p>
@@ -204,21 +213,12 @@ get_header(); ?>
 <section id="social-feed" class="section " role="main">
 	<div class="content">
 		<div class="centered clear">
-			<div class="left">
-				<div class="instafeed">
-					<h3>#nycskillslab</h3>
-				</div>			
-			</div>
-			<div class="right">
-				<div class="latest-tweets">
-					<div class="tweet-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-					<h4>Latest Tweets <span>@NYC_Skills_lab</span></h4>
-					<div class="tweet-holder">
-					<?php echo do_shortcode('[kebo_tweets title="" count="6" style="list" theme="light" offset="false" avatar="off" conversations="false" media="false"]'); ?>
+			<div class="latest-tweets">
+				<h3><div class="tweet-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div><span>Latest Tweets</span> @NYC_Skills_lab</h3>
+				<div class="tweet-holder">
+				<?php echo do_shortcode('[kebo_tweets title="" display="all" count="8" style="list" theme="light" offset="false" avatar="off" conversations="false" media="false"]'); ?>
 
-					</div>
 				</div>
-				
 			</div>
 		</div>
 	</div>
