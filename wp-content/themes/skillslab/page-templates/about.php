@@ -161,7 +161,7 @@ get_header(); ?>
 			<div class="types">
 				<p class="icon-above">Types of school-wide innovations:</p>
 				<div class="type-holder">
-					<div class="half">
+					<div class="half clear">
 						<div class="img">
 							<?php get_template_part('template-parts/inline', 'schoolwide.svg'); ?>
 						</div>
@@ -182,7 +182,7 @@ get_header(); ?>
 				 			<a class="standalone-link" href="<?php echo $link; ?>#innovation">more about this innovation <i class="fa fa-chevron-right"></i></a>
 						</div>
 					</div>
-					<div class="half">
+					<div class="half clear">
 						<div class="img">
 							<?php get_template_part('template-parts/inline', 'clock.svg'); ?>
 						</div>
@@ -203,7 +203,7 @@ get_header(); ?>
 				 			<a class="standalone-link" href="<?php echo $link; ?>#innovation">more about this innovation <i class="fa fa-chevron-right"></i></a>
 						</div>
 					</div>
-					<div class="half">
+					<div class="half clear">
 						<div class="img">
 							<?php get_template_part('template-parts/inline', 'paper.svg'); ?>
 						</div>
@@ -224,7 +224,7 @@ get_header(); ?>
 				 			<a class="standalone-link" href="<?php echo $link; ?>#innovation">more about this innovation <i class="fa fa-chevron-right"></i></a>
 						</div>
 					</div>
-					<div class="half">
+					<div class="half clear">
 						<div class="img">
 							<?php get_template_part('template-parts/inline', 'books.svg'); ?>
 						</div>

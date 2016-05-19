@@ -9,6 +9,11 @@ html {
 	display: block;
 	clear:both;
 }
+blockquote {
+	margin:0;
+	padding: 0;
+	border:none;
+}
 .content {
 	max-width: 1240px;
 	margin: auto;
@@ -773,7 +778,7 @@ a.standalone-link {
 						display: block;
 						width: 50%;
 						float: left;
-						margin: rem-calc(20 0 0);
+						margin: rem-calc(0);
 						li {
 							padding: rem-calc(0 30 15 18);
 							font-size: 14px;
@@ -903,6 +908,7 @@ a.standalone-link {
 				}
 				.block-label {
 					display: inline-block;
+					width: calc(100% - 94px);
 					vertical-align: top;
 					color: #222;
 					font-size: 14px;
@@ -1498,7 +1504,7 @@ a.standalone-link {
 					}
 					&:after {
 						content: '';
-						width: 75px;
+						width: 73px;
 						height: 32px;
 						display: block;
 						position: absolute;
@@ -1506,6 +1512,7 @@ a.standalone-link {
 						background:  url('../images/sprites.png') 0 -575px no-repeat;
 						background-size: 250px auto;
 						bottom: 5px;
+						margin-left: -5px;
 					}
 					h6 {
 						color: #fff;

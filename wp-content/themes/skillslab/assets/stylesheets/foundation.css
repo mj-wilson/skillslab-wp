@@ -6888,6 +6888,11 @@ html {
   display: block;
   clear: both; }
 
+blockquote {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
 .content {
   max-width: 1240px;
   margin: auto;
@@ -7540,7 +7545,7 @@ a.standalone-link {
           display: block;
           width: 50%;
           float: left;
-          margin: 1.25rem 0 0; }
+          margin: 0; }
           .page-template-about .section:not(#about-hero)#schools-partners .list ul li ul li {
             padding: 0 1.875rem 0.9375rem 1.125rem;
             font-size: 14px;
@@ -7648,6 +7653,7 @@ a.standalone-link {
         margin-top: 11px; }
     .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block-label {
       display: inline-block;
+      width: calc(100% - 94px);
       vertical-align: top;
       color: #222;
       font-size: 14px;
@@ -8173,14 +8179,15 @@ a.standalone-link {
         margin-left: -24px; }
       .single-school .secondary .right .task-container .question:after {
         content: '';
-        width: 75px;
+        width: 73px;
         height: 32px;
         display: block;
         position: absolute;
         left: 100%;
         background: url("../images/sprites.png") 0 -575px no-repeat;
         background-size: 250px auto;
-        bottom: 5px; }
+        bottom: 5px;
+        margin-left: -5px; }
       .single-school .secondary .right .task-container .question h6 {
         color: #fff;
         position: relative;
@@ -8550,6 +8557,29 @@ a.standalone-link {
     font-size: 20px; }
   #social-feed .centered .kebo-tweets.list .ktweet {
     width: 48%; }
+  .page-template-about {
+    font-size: 14px; }
+    .page-template-about .section:not(#about-hero) h2 {
+      font-size: 22px; }
+    .page-template-about .section:not(#about-hero) .support h3 {
+      font-size: 1.125rem; }
+    .page-template-about .section:not(#about-hero) .support ul li {
+      font-size: 14px; }
+    .page-template-about .section:not(#about-hero)#more-info .col {
+      width: 32%; }
+  .single-school #tasks h2 {
+    margin: 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e6e6e6; }
+    .single-school #tasks h2:before {
+      display: none; }
+  .single-school .secondary .left .index ul {
+    margin: 0; }
+    .single-school .secondary .left .index ul li {
+      font-size: 14px; }
+  .single-school .secondary .right:before {
+    top: 0;
+    height: 100%; }
   /* end max-width 1024 */ }
 
 @media all and (max-width: 768px) {
@@ -8606,6 +8636,114 @@ a.standalone-link {
     padding-right: 0; }
   #about .right {
     padding-right: 25px; }
+  .page-template-about .section:not(#about-hero) h2 {
+    font-size: 22px; }
+  .page-template-about .section:not(#about-hero) .support h3 {
+    font-size: 1.125rem; }
+  .page-template-about .section:not(#about-hero)#schools-partners .list ul li ul {
+    width: 100%;
+    float: none;
+    margin: 0.9375rem 0 0; }
+    .page-template-about .section:not(#about-hero)#schools-partners .list ul li ul li a {
+      font-size: 13px; }
+  .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined {
+    font-size: 16px; }
+  .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder {
+    width: 50%; }
+    .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block-label {
+      line-height: 1.2em;
+      padding: 1.5625rem 0 0 0.3125rem; }
+  .page-template-about .section:not(#about-hero)#performance-tasks .narrow {
+    font-size: 16px; }
+    .page-template-about .section:not(#about-hero)#performance-tasks .narrow ul li {
+      padding: 0.625rem 0 0 1.875rem;
+      position: relative;
+      line-height: 1.2em;
+      font-size: 13px;
+      min-height: 35px; }
+      .page-template-about .section:not(#about-hero)#performance-tasks .narrow ul li:before {
+        display: block;
+        position: absolute;
+        left: 0; }
+  .page-template-about .section:not(#about-hero)#performance-tasks .types p.icon-above {
+    font-size: 16px; }
+  .page-template-about .section:not(#about-hero)#performance-tasks .types ul {
+    list-style: none;
+    margin: 0; }
+    .page-template-about .section:not(#about-hero)#performance-tasks .types ul li {
+      display: block;
+      width: 100%;
+      padding: 0 0 1.875rem; }
+      .page-template-about .section:not(#about-hero)#performance-tasks .types ul li strong {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.04em; }
+  .page-template-about .section:not(#about-hero)#innovations .top {
+    font-size: 16px; }
+  .page-template-about .section:not(#about-hero)#innovations .types p.icon-above {
+    font-size: 16px; }
+  .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half {
+    width: 100%;
+    display: block;
+    padding: 0 0 2.5rem; }
+    .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half .text {
+      padding-left: 0.625rem; }
+      .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half .text h6 {
+        font-size: 0.875rem; }
+  .page-template-about .section:not(#about-hero)#products .narrow ul {
+    width: 100%;
+    display: block; }
+  .page-template-about .section:not(#about-hero)#more-info .col {
+    width: 100%; }
+    .page-template-about .section:not(#about-hero)#more-info .col:first-child {
+      padding-bottom: 20px; }
+  .page-template-performance-tasks #pt-list {
+    padding: 0 0 3.75rem; }
+    .page-template-performance-tasks #pt-list .left, .page-template-performance-tasks #pt-list .right {
+      width: 100%;
+      padding: 0;
+      float: none; }
+    .page-template-performance-tasks #pt-list .left .cat-container:nth-child(2) h2 span,
+    .page-template-performance-tasks #pt-list .right .cat-container:nth-child(1) h2 span {
+      color: #669acb;
+      position: relative; }
+      .page-template-performance-tasks #pt-list .left .cat-container:nth-child(2) h2 span:before,
+      .page-template-performance-tasks #pt-list .right .cat-container:nth-child(1) h2 span:before {
+        content: '2';
+        color: #ffffff;
+        position: absolute;
+        display: block;
+        width: 100%;
+        text-align: center; }
+    .page-template-performance-tasks #pt-list .right .cat-container:nth-child(1) h2 span:before {
+      content: '3'; }
+  .page-template-partners #partners-hero {
+    background: #f89938; }
+    .page-template-partners #partners-hero .centered {
+      max-width: 850px;
+      margin: auto;
+      padding: 3.125rem 0; }
+    .page-template-partners #partners-hero h1 {
+      color: #fff; }
+    .page-template-partners #partners-hero p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #fff;
+      letter-spacing: 0.04em;
+      margin: 0.9375rem 0 0; }
+      .page-template-partners #partners-hero p strong {
+        text-transform: uppercase; }
+  .page-template-partners #parter-list .cat-container .left {
+    float: none;
+    width: 100%;
+    padding: 0 0 1.5625rem 0; }
+  .page-template-partners #parter-list .cat-container .right {
+    float: none;
+    width: 100%;
+    border-left: none;
+    padding: 0; }
   /* end max-width 768 */ }
 
 @media all and (max-width: 520px) {
@@ -8684,6 +8822,50 @@ a.standalone-link {
   #social-feed .centered .kebo-tweets.list .ktweet {
     width: 98%;
     margin-bottom: 10px; }
+  .page-template-about {
+    font-size: 13px; }
+    .page-template-about .section:not(#about-hero) h2 {
+      font-size: 20px; }
+    .page-template-about .section:not(#about-hero) .support h3 {
+      font-size: 1rem; }
+    .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined {
+      font-size: 15px; }
+    .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder {
+      width: 100%; }
+    .page-template-about .section:not(#about-hero)#innovations .top {
+      font-size: 16px; }
+    .page-template-about .section:not(#about-hero)#innovations .types p.icon-above {
+      font-size: 16px; }
+    .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half {
+      width: 100%;
+      display: block;
+      padding: 0 0 2.5rem; }
+      .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half .img {
+        float: left;
+        width: 18%;
+        text-align: center; }
+        .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half .img svg {
+          max-width: 90%;
+          max-height: 60px;
+          opacity: 0.75; }
+      .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half .text {
+        float: left;
+        width: 82%;
+        padding-left: 0.5rem; }
+        .page-template-about .section:not(#about-hero)#innovations .types .type-holder .half .text h6 {
+          font-size: 0.8125rem; }
+  .page-template-performance-tasks #pt-list .cat-container .post-list .post .show-hide .bottom .sl-button {
+    float: none; }
+  .page-template-partners #parter-list .cat-container .right .post .logo {
+    width: 70px;
+    padding: 0; }
+  .page-template-partners #parter-list .cat-container .right .post .description {
+    width: calc(100% - 70px);
+    padding: 0 0 0 0.75rem; }
+    .page-template-partners #parter-list .cat-container .right .post .description p {
+      font-size: 13px; }
+    .page-template-partners #parter-list .cat-container .right .post .description .title {
+      font-size: 14px; }
   /* end max-width 480 */ }
 
 /*# sourceMappingURL=foundation.css.map */

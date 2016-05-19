@@ -69,7 +69,7 @@ get_header(); ?>
 				 			<p class="question"><?php echo $question; ?></p>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
-				 			<div class="bottom">
+				 			<div class="bottom clear">
 				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
@@ -123,7 +123,7 @@ get_header(); ?>
 				 			<p class="question"><?php echo $question; ?></p>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
-				 			<div class="bottom">
+				 			<div class="bottom clear">
 				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
@@ -180,7 +180,7 @@ get_header(); ?>
 				 			<p class="question"><?php echo $question; ?></p>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
-				 			<div class="bottom">
+				 			<div class="bottom clear">
 				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
@@ -234,7 +234,7 @@ get_header(); ?>
 				 			<p class="question"><?php echo $question; ?></p>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
-				 			<div class="bottom">
+				 			<div class="bottom clear">
 				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
