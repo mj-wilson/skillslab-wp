@@ -17,6 +17,21 @@
 			margin: 0;
 			padding: 0;
 		}
+		p {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			&.right {
+				text-align: right;
+				a{
+					text-transform: uppercase;
+					letter-spacing: 0.05em;
+					&:hover {
+						border-bottom:1px solid;
+					}
+				}
+			}
+		}
 	}
 }
 #back-to-top {

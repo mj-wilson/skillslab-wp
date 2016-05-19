@@ -17,7 +17,7 @@
 		<div id="footer-container">
 			<footer id="footer">
 			<div class="content">
-			<p>Copyright &copy; NYC Skills Lab <?php echo date('Y'); ?>, All rights reserved.</p>
+			<p>Copyright &copy; NYC Skills Lab <?php echo date('Y'); ?>, All rights reserved.</p><p class="right"><a href="/about#more-info">Contact</a></p>
 			</div>
 			</footer>
 		</div>

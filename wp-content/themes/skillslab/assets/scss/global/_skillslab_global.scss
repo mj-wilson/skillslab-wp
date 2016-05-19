@@ -357,8 +357,12 @@ h1 {
 				font-weight: bold;
 				color: $gray;
 				font-size: 14px;
+				@include transition(all .3s ease);
 				i {
 					font-size: 12px;
+				}
+				&:hover {
+					border-bottom: 1px solid;
 				}
 			}
 			ol {
@@ -548,8 +552,13 @@ a.standalone-link {
 	font-weight: bold;
 	color: inherit;
 	font-size: 14px;
+		border-bottom: 1px solid transparent;
+	@include transition(all .3s ease);
 	i {
 		font-size: 12px;
+	}
+	&:hover {
+		border-bottom: 1px solid;
 	}
 }
 #social-feed {
@@ -646,6 +655,12 @@ a.standalone-link {
 						font-weight: 600;
 					}
 
+				}
+				a {
+					@include transition(opacity .3s ease);
+				}
+				a:hover {
+					opacity: 0.8;
 				}
 			}
 		}

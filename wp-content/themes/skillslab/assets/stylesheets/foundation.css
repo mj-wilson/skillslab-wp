@@ -6353,6 +6353,11 @@ CUSTOM MIXINS
 .top-bar .top-bar-left {
   float: left;
   width: 200px; }
+  .top-bar .top-bar-left a {
+    display: block;
+    transition: all 0.3s ease; }
+    .top-bar .top-bar-left a:hover {
+      opacity: 0.8; }
 
 .top-bar .top-bar-right {
   float: left;
@@ -6422,11 +6427,14 @@ CUSTOM MIXINS
         line-height: 2em;
         white-space: nowrap;
         letter-spacing: 0;
+        border: none;
         transition: all 0.3s ease; }
         .top-bar .top-bar-right .is-dropdown-submenu li a:hover, .top-bar .top-bar-right .dropdown.menu > li.opens-left > .is-dropdown-submenu li a:hover {
           color: #669acb; }
       .top-bar .top-bar-right .is-dropdown-submenu li:last-child, .top-bar .top-bar-right .dropdown.menu > li.opens-left > .is-dropdown-submenu li:last-child {
         border: none; }
+      .top-bar .top-bar-right .is-dropdown-submenu li.current-menu-item a, .top-bar .top-bar-right .dropdown.menu > li.opens-left > .is-dropdown-submenu li.current-menu-item a {
+        color: #669acb; }
 
 @media screen and (max-width: 1024px) {
   .top-bar .top-bar-left {
@@ -6563,6 +6571,17 @@ CUSTOM MIXINS
       list-style-type: none;
       margin: 0;
       padding: 0; }
+    #footer-container #footer p {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%; }
+      #footer-container #footer p.right {
+        text-align: right; }
+        #footer-container #footer p.right a {
+          text-transform: uppercase;
+          letter-spacing: 0.05em; }
+          #footer-container #footer p.right a:hover {
+            border-bottom: 1px solid; }
 
 #back-to-top {
   display: none;
@@ -7168,9 +7187,12 @@ h1 {
       font-style: italic;
       font-weight: bold;
       color: #777777;
-      font-size: 14px; }
+      font-size: 14px;
+      transition: all 0.3s ease; }
       #details .col-holder .quarter p a i {
         font-size: 12px; }
+      #details .col-holder .quarter p a:hover {
+        border-bottom: 1px solid; }
     #details .col-holder .quarter ol {
       margin: 0; }
       #details .col-holder .quarter ol li {
@@ -7341,9 +7363,13 @@ a.standalone-link {
   font-style: italic;
   font-weight: bold;
   color: inherit;
-  font-size: 14px; }
+  font-size: 14px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease; }
   a.standalone-link i {
     font-size: 12px; }
+  a.standalone-link:hover {
+    border-bottom: 1px solid; }
 
 #social-feed {
   background: url(../images/geo.jpg) top center repeat;
@@ -7427,6 +7453,10 @@ a.standalone-link {
           padding: 0 5px;
           margin-top: 0;
           font-weight: 600; }
+      #social-feed .centered .kebo-tweets.list .ktweet a {
+        transition: opacity 0.3s ease; }
+      #social-feed .centered .kebo-tweets.list .ktweet a:hover {
+        opacity: 0.8; }
 
 .page-template-about #about-hero {
   background-image: linear-gradient(185deg, #518dc7, #4e7793);
