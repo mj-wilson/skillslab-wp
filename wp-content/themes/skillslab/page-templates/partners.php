@@ -9,7 +9,7 @@ get_header(); ?>
 
 <!-- Hero Section -->
 <section id="partners-hero" class="hero section" role="main">
-	<div class="content">
+	<div class="content revealme">
 		<div class="centered">
 				<h1>Our Partners</h1>
 				<?php the_content(); ?>
@@ -24,7 +24,7 @@ get_header(); ?>
 		<div class="centered">
 			
 			<div class="cat-container clear">
-				<div class="left">
+				<div class="left revealme">
 					<h2>Our Sponsor</h2>
 				</div>
 				<div class="right">
@@ -43,7 +43,7 @@ get_header(); ?>
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); 
 					?>
-				 	<div class="post">
+				 	<div class="post revealme">
 					 	<div class="logo">
 					 		<?php  if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
@@ -64,7 +64,7 @@ get_header(); ?>
 			</div><!-- end .cat-container -->
 
 			<div class="cat-container clear">
-				<div class="left">
+				<div class="left revealme">
 					<h2>Industry Partners</h2>
 				</div>
 				<div class="right">
@@ -84,7 +84,7 @@ get_header(); ?>
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); 
 					?>
-				 	<div class="post">
+				 	<div class="post revealme">
 					 	<div class="logo">
 					 		<?php  if ( has_post_thumbnail() ) {
 								the_post_thumbnail();

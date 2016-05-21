@@ -9,14 +9,14 @@ get_header(); ?>
 
 <!-- Hero Section -->
 <section id="pt-hero" class="hero section" role="main">
-	<div class="content">
+	<div class="content revealme">
 		<div class="centered">
 				<h1>Performance Tasks</h1>
 		</div>
 	</div>
 </section>
 <section id="pt-subhero" class="hero section" role="main">
-	<div class="content">
+	<div class="content revealme">
 		<div class="centered">
 				<?php the_content(); ?>
 		</div>
@@ -27,7 +27,7 @@ get_header(); ?>
 <!-- List Section -->
 <section id="pt-list" class="section" role="main">
 	<div class="content clear">
-		<div class="left">
+		<div class="left revealme">
 			
 			<div class="cat-container">
 				<h2><span>1</span>Work Based Problems</h2>
@@ -139,7 +139,7 @@ get_header(); ?>
 
 		</div>			
 
-		<div class="right">
+		<div class="right revealme delay1">
 			<div class="cat-container">
 				<h2><span>2</span>Student Driven Campaigns</h2>
 				<div class="cat-description"><?php echo term_description( '9', 'task_type' ) ?></div>

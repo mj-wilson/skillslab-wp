@@ -9,7 +9,7 @@ get_header(); ?>
 
 <!-- Hero Section -->
 <section id="about-hero" class="hero section" role="main">
-	<div class="content">
+	<div class="content revealme">
 		<div class="centered">
 				<?php the_content(); ?>
 		</div>
@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="content">
 		<div class="centered">
 			<h2>Process Overview</h2>
-			<div class="infographic">
+			<div class="infographic revealme">
 				<div class="top clear">
 					<div class="third left">
 						<h3>PROBLEM:</h3>
@@ -68,7 +68,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="support">
+			<div class="support revealme">
 				<h3>Skills Lab Support Strategies</h3>
 				<?php the_field('support_strategies'); ?>
 			</div>
@@ -78,7 +78,7 @@ get_header(); ?>
 
 <!-- Schools and Partners Section -->
 <section id="schools-partners" class="section gray" role="main">
-	<div class="content">
+	<div class="content revealme">
 		<div class="centered">
 			<h2>Schools + Partners</h2>
 			<div class="list">
@@ -100,27 +100,27 @@ get_header(); ?>
 			
 				<div class="blocks clear">
 					<h4 class="lined"><span>SKILLS BUILDING BLOCKS</span></h4>
-					<div class="block-holder">
+					<div class="block-holder revealme">
 						<div class="block mindset"></div>
 						<div class="block-label">PERSONAL MINDSET</div>
 					</div>
-					<div class="block-holder">
+					<div class="block-holder revealme">
 						<div class="block planning"></div>
 						<div class="block-label">Planning For Success</div>
 					</div>
-					<div class="block-holder">
+					<div class="block-holder revealme">
 						<div class="block social"></div>
 						<div class="block-label">social awareness</div>
 					</div>
-					<div class="block-holder">
+					<div class="block-holder revealme">
 						<div class="block verbal"></div>
 						<div class="block-label">verbal communication</div>
 					</div>
-					<div class="block-holder">
+					<div class="block-holder revealme">
 						<div class="block collaboration"></div>
 						<div class="block-label">Collaboration</div>
 					</div>
-					<div class="block-holder">
+					<div class="block-holder revealme">
 						<div class="block problem"></div>
 						<div class="block-label">problem solving</div>
 					</div>
@@ -138,10 +138,10 @@ get_header(); ?>
 	<div class="content">
 		<div class="centered">
 			<h2>Performance Tasks</h2>
-			<div class="narrow">
+			<div class="narrow revealme">
 				<?php the_field('performance_tasks_overview'); ?>
 			</div>
-			<div class="types">
+			<div class="types revealme">
 				<p class="icon-above">Types of performance tasks:</p>
 				<?php the_field('performance_tasks_types'); ?>
 				<a class="standalone-link" href="/performance-tasks">view all performance tasks <i class="fa fa-chevron-right"></i></a>
@@ -155,10 +155,10 @@ get_header(); ?>
 	<div class="content">
 		<div class="centered">
 			<h2>Innovations</h2>
-			<div class="top">
+			<div class="top revealme">
 				<?php the_field('innovations_overview'); ?>
 			</div>
-			<div class="types">
+			<div class="types revealme">
 				<p class="icon-above">Types of school-wide innovations:</p>
 				<div class="type-holder">
 					<div class="half clear">
@@ -256,7 +256,7 @@ get_header(); ?>
 	<div class="content">
 		<div class="centered">
 			<h2>products + outcomes</h2>
-			<div class="narrow">
+			<div class="narrow revealme">
 				<?php the_field('products_and_outcomes'); ?>
 			</div>
 		</div>
@@ -265,7 +265,7 @@ get_header(); ?>
 
 <!-- More Information Section -->
 <section id="more-info" class="section" role="main">
-	<div class="content">
+	<div class="content revealme">
 		<div class="centered">
 			<div class="col">
 				<h2>For More <br/>Information</h2>

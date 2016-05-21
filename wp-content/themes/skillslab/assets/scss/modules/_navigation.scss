@@ -164,52 +164,58 @@
           z-index: 998;
           height: 100%;
           top: 0;
+          bottom: 0;
           right: -80%;
-          background: #fff;
+         background: #fff;
           padding: rem-calc(60px 0 0);
           @include transition(all 0.3s ease);
-          > ul {
-            margin: 0;
-            display: block;
-            text-align: left;
-            overflow: hidden;
-            li {
-              display: block;
-              margin: 0;
-              padding: 0;
-              border-top: 1px solid $light-gray;
-              a {
-                font-family: $body-font-family;
-                color: #222;
-                text-shadow: none;
-                font-weight: bold;
-                font-size: 13px;
-                padding: 12px 20px 8px;
-                letter-spacing: 0;
-                line-height: 1;
-                border:none;
-                &:hover {
-                  color:$gray;
-                }
-
-              }
-              ul {
+          .overflow-scroll {
+          overflow-y: auto;
+          overflow-x:hidden;
+          height: 100%;
+            > ul {
                 margin: 0;
-                max-width: 100%;
+                display: block;
+                text-align: left;
+                overflow-y: auto;
+                overflow-x:hidden;
                 li {
+                  display: block;
+                  margin: 0;
                   padding: 0;
+                  border-top: 1px solid $light-gray;
                   a {
+                    font-family: $body-font-family;
+                    color: #222;
+                    text-shadow: none;
+                    font-weight: bold;
+                    font-size: 13px;
+                    padding: 12px 20px 8px;
+                    letter-spacing: 0;
                     line-height: 1;
-                    font-weight: 600;
-                    color: $dark-gray;
-                    font-size: 12px;
-                    text-transform: none;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                &:hover {
-                  color:$blue;
-                }
+                    border:none;
+                    &:hover {
+                      color:$gray;
+                    }
+
+                  }
+                  ul {
+                    margin: 0;
+                    max-width: 100%;
+                    li {
+                      padding: 0;
+                      a {
+                        line-height: 1;
+                        font-weight: 600;
+                        color: $dark-gray;
+                        font-size: 12px;
+                        text-transform: none;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    &:hover {
+                      color:$blue;
+                    }
 
                   }
                 }
@@ -219,6 +225,7 @@
               }
             }
           }
+        }
         }
 
         &.open {

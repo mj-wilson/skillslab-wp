@@ -156,7 +156,7 @@ get_header(); ?>
 
 <!-- Goals -->
 <section id="goals" class="section " role="main">
-	<div class="content">
+	<div class="content revealme">
 		<div class="centered">
 			<?php the_field('targeted_achievements'); ?>
 		</div>
@@ -167,10 +167,10 @@ get_header(); ?>
 <section id="about" class="section " role="main">
 	<div class="content">
 		<div class="centered clear">
-			<div class="left">
+			<div class="left revealme">
 				<?php the_field('about_skills_lab'); ?>
 			</div>
-			<div class="right">
+			<div class="right revealme delay1">
 				<?php the_field('about_ge_foundation'); ?>
 			</div>
 		</div>
@@ -187,9 +187,10 @@ get_header(); ?>
 			<?php $posts = get_field('partners');
 
 			if( $posts ): ?>
+			<?php $i = 0; ?>
 			    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 			        <?php setup_postdata($post); ?>
-			        <div class="quarter">
+			        <div class="quarter revealme delay<?php echo $i; ?>">
 			            <div class="logo-image">
 			            	<?php  if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
@@ -199,6 +200,7 @@ get_header(); ?>
 
 			            <h6><?php the_title(); ?></h6>
 			        </div>
+				<?php $i++; ?>
 			    <?php endforeach; ?>
 			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>

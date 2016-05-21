@@ -11,7 +11,9 @@
 <nav class="vertical menu" id="mobile-menu" role="navigation">
 	<div class="mobile-nav-toggle"><span></span></div>
 	<div class="mobile-menu-holder">
-		<?php foundationpress_mobile_nav(); ?>
+		<div class="overflow-scroll">
+			<?php foundationpress_mobile_nav(); ?>
+		</div>
 	</div>
   
 </nav>

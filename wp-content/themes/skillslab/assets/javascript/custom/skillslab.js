@@ -1,4 +1,4 @@
-	
+
 $('.index ul li').click(function(){
 	$(this).siblings().removeClass('active');
 	$(this).addClass('active');
@@ -34,7 +34,7 @@ var updateBlocks = function(){
 // Setup reveal animations	
 var reveal = function(){
 	var bottom = $(window).scrollTop() + $(window).height();
-	$(".revealme").each(function(i){            
+	$(".revealme, .ktweet").each(function(i){            
     	if($(this).offset().top < bottom - 50) {
     		$(this).addClass("animate_active");
     	} 
