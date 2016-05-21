@@ -11,7 +11,7 @@ get_header(); ?>
 <section id="home-hero" class="hero" role="main">
 	<div class="content">
 		<div class="headline">
-			<div class="titles">
+			<div class="titles revealme">
 				<?php the_content(); ?>
 			</div>
 		</div>
@@ -23,7 +23,7 @@ get_header(); ?>
 	<div class="content">
 		<div class="centered">
 			<h1>Process Overview</h1>
-			<div class="infographic">
+			<div class="infographic revealme">
 				<div class="top clear">
 					<div class="third left">
 						<h3>PROBLEM:</h3>
@@ -79,9 +79,9 @@ get_header(); ?>
 <section id="schools-partners" class="section gray" role="main">
 	<div class="content">
 		<div class="centered">
-			<h1>Schools + Partners</h1>
-			<div class="clear col-holder">
-				<div class="quarter schools">
+			<h1 revealme>Schools + Partners</h1>
+			<div class="clear col-holder ">
+				<div class="quarter schools revealme">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/school_sm.svg">
 					<div class="stats">
 						<div class="number">11</div>
@@ -91,7 +91,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="quarter partners">
+				<div class="quarter partners revealme delay1">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/block-collaboration.svg">
 					<div class="stats">
 						<div class="number">28</div>
@@ -101,7 +101,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="quarter educators">
+				<div class="quarter educators revealme delay2">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/book-apple.svg">
 					<div class="stats">
 						<div class="number">40<span>+</span></div>
@@ -111,7 +111,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="quarter students">
+				<div class="quarter students revealme delay3">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/backpack.svg">
 					<div class="stats">
 						<div class="number">1000<span>+</span></div>
@@ -132,19 +132,19 @@ get_header(); ?>
 	<div class="content">
 		<div class="centered">
 			<div class="clear col-holder">
-				<div class="quarter">
+				<div class="quarter revealme">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/blocks.svg">
 					<?php the_field('skills_framework'); ?>
 				</div>
-				<div class="quarter dark-orange">
+				<div class="quarter dark-orange revealme delay1">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/support.svg">
 					<?php the_field('support_strategies'); ?>
 				</div>
-				<div class="quarter dark-green">
+				<div class="quarter dark-green revealme delay2">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/thumbtack.svg">
 					<?php the_field('performance_tasks'); ?>
 				</div>
-				<div class="quarter orange">
+				<div class="quarter orange revealme delay3">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/light-bulb-line.svg">
 					<?php the_field('innovation_projects'); ?>
 				</div>

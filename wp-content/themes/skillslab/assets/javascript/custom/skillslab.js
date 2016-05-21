@@ -31,6 +31,16 @@ var updateBlocks = function(){
 		$(this).addClass( colors[i] );			
 	});
 };
+// Setup reveal animations	
+var reveal = function(){
+	var bottom = $(window).scrollTop() + $(window).height();
+	$(".revealme").each(function(i){            
+    	if($(this).offset().top < bottom - 50) {
+    		$(this).addClass("animate_active");
+    	} 
+	});
+};
+
 $( document ).ready(function() {
 	if($('.single-school').length) {
 	    updateBlocks();
@@ -44,17 +54,21 @@ $( document ).ready(function() {
 	    $('html, body').animate({scrollTop: 0 }, 1000);
 	});
 
-	$(document).scroll(function() {
+	$(window).bind("load scroll resize",function(e){	 
 	    if( $(this).scrollTop() > 1000 ) {
 	    	$("#back-to-top").fadeIn();
 	    } else {
 	    	$("#back-to-top").fadeOut();
 	    } 
+
+	    reveal();
+	    
 	});
 
 	$(".mobile-nav-toggle").click(function() {
 	   $(this).parent().toggleClass('open');
 	});
+
 
 });
 
