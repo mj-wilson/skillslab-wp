@@ -1331,7 +1331,8 @@ a.standalone-link {
 						border-bottom: 1px solid $light-gray;
 						cursor: pointer;
 						position: relative;
-						@include transition(all 0.3s ease);
+						@include transition(opacity 0.3s ease);
+						@include transition(background 0.3s ease);
 						&:hover {
 							opacity:0.8;
 						}
