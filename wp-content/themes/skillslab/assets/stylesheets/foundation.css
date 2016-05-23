@@ -8873,6 +8873,84 @@ a.standalone-link {
     padding: 0; }
   /* end max-width 768 */ }
 
+@media all and (max-width: 767px) {
+  .single-school .hero .left {
+    float: none;
+    width: 100%;
+    padding: 0; }
+  .single-school .hero .right {
+    padding: 0;
+    float: none;
+    width: 100%; }
+    .single-school .hero .right p {
+      font-size: 13px; }
+  .single-school h2 {
+    font-size: 1.4375rem;
+    letter-spacing: 0.03em;
+    text-align: left; }
+    .single-school h2 span {
+      padding: 0 5px 0 60px; }
+      .single-school h2 span:before {
+        font: 30px/50px FontAwesome;
+        width: 50px;
+        height: 50px; }
+  .single-school #tasks h2 {
+    border: none; }
+  .single-school .secondary .left {
+    border: none;
+    float: none;
+    width: 100%; }
+    .single-school .secondary .left .index {
+      margin-left: -20px;
+      margin-right: -20px;
+      border-top: 1px solid #e6e6e6; }
+      .single-school .secondary .left .index ul {
+        margin: 0px 0 0; }
+        .single-school .secondary .left .index ul li {
+          padding: 1.0625rem 2.6875rem 0.9375rem 3.125rem;
+          position: relative;
+          background: #fff; }
+          .single-school .secondary .left .index ul li:before {
+            left: 20px;
+            font-size: 15px;
+            width: 22px;
+            height: 22px;
+            line-height: 20px;
+            margin: -10px 0 0 0; }
+          .single-school .secondary .left .index ul li:after {
+            content: "\f055";
+            font: 18px/1em FontAwesome;
+            position: absolute;
+            top: 50%;
+            margin-top: -9px;
+            right: 20px;
+            color: #cccccc;
+            transition: all 0.3s ease; }
+          .single-school .secondary .left .index ul li.active {
+            background: #f6f6f6;
+            color: #bbb;
+            width: 100%; }
+            .single-school .secondary .left .index ul li.active:after {
+              visibility: hidden; }
+    .single-school .secondary .left .skills {
+      display: none; }
+  .single-school .secondary .right {
+    text-align: left;
+    float: none;
+    width: 100%;
+    padding: 1.875rem 0 5rem 0; }
+    .single-school .secondary .right:before {
+      display: none; }
+    .single-school .secondary .right .task-container h6 {
+      font-size: 15px; }
+      .single-school .secondary .right .task-container h6 span {
+        font-size: 16px; }
+    .single-school .secondary .right .task-container p, .single-school .secondary .right .task-container li {
+      font-size: 13px; }
+  .single-school .secondary#innovation .right h3 {
+    font-size: 16px; }
+  /* end max-width 767 */ }
+
 @media all and (max-width: 520px) {
   #schools-partners .col-holder {
     display: block; }
@@ -8993,6 +9071,17 @@ a.standalone-link {
       font-size: 13px; }
     .page-template-partners #parter-list .cat-container .right .post .description .title {
       font-size: 14px; }
+  .single-school .secondary .right .task-container .question {
+    margin: 1.25rem 0.75rem 1.875rem 0; }
+    .single-school .secondary .right .task-container .question:after {
+      width: 37px;
+      height: 16px;
+      background-position: 0 -287px;
+      background-size: 125px auto; }
+  .single-school .secondary .right .task-container:nth-child(2) .question:after {
+    background-position: 0px -312px; }
+  .single-school .secondary .right .task-container:nth-child(3) .question:after {
+    background-position: 0px -337px; }
   /* end max-width 480 */ }
 
 /*# sourceMappingURL=foundation.css.map */

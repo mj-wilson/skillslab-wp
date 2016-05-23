@@ -447,6 +447,123 @@
 }
 
 
+@media all and (max-width: 767px) {
+
+	.single-school {
+		.hero {
+			.left {
+				float: none;
+				width: 100%;
+				padding: rem-calc(0);
+			}
+			.right {
+				padding: rem-calc(0);
+				float: none;
+				width: 100%;
+				p {
+					font-size: 13px;
+				}
+			}
+		}
+		h2 {
+			font-size: rem-calc(23);
+			letter-spacing: 0.03em;
+			text-align: left;
+			span {
+				padding: 0 5px 0 60px;
+				&:before {
+					font: 30px/50px FontAwesome;
+					width: 50px;
+					height: 50px;
+				}
+
+			}
+		}
+		#tasks h2 {
+			border:none;
+		}
+		.secondary {
+			.left {
+				border: none;
+				float: none;
+				width: 100%;
+				.index {
+					margin-left: -20px;
+					margin-right: -20px;
+					border-top: 1px solid $light-gray;
+					ul {
+						margin: 0px 0 0;
+						li {
+						padding: rem-calc(17 43 15 50);
+						position: relative;
+						background: #fff;
+						&:before {
+							left: 20px;
+							font-size: 15px;
+							width: 22px;
+							height: 22px;
+							line-height: 20px;
+							margin: -10px 0 0 0;
+						}						
+						&:after {
+							content: "\f055";
+							font: 18px/1em FontAwesome;
+							position: absolute;
+							top: 50%;
+							margin-top: -9px;
+							right: 20px;
+							color: $lightish-gray;
+							@include transition(all 0.3s ease);
+						}
+						&.active {
+							background: $white-gray;
+							color: #bbb;
+							width: 100%;
+							&:after{
+								visibility: hidden;
+							}
+						}
+
+						}
+					}
+				}
+				.skills {
+					display: none;
+				}
+			}
+			.right {
+				text-align: left;
+				float: none;
+				width: 100%;
+				padding: rem-calc(30 0 80 0);
+				&:before {	
+					display:none;
+				}
+				.task-container {
+					h6 {
+						font-size: 15px;
+						span {
+							font-size: 16px;
+						}
+					}
+					p, li {
+						font-size: 13px;
+					}
+				}
+			}
+			&#innovation .right h3 {
+				font-size: 16px;
+			}
+		}
+	
+	}
+
+
+/* end max-width 767 */
+}
+
+
+
 
 @media all and (max-width: 520px) {
 
@@ -674,6 +791,28 @@
 
 	}
 }
+.single-school  .secondary  .right .task-container {
 
+	.question {
+		margin: rem-calc(20 12 30 0);
+		&:after {
+			width: 37px;
+			height: 16px;
+			background-position:  0 -287px;
+			background-size: 125px auto;
+		}
+	}
+	&:nth-child(2){
+		.question:after {
+			background-position: 0px -312px;
+		}
+	}
+	&:nth-child(3){
+		.question:after {
+			background-position: 0px -337px;
+		}		
+	}
+
+}
 /* end max-width 480 */
 }
