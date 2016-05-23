@@ -77,7 +77,7 @@
 		}
 		.kebo-tweets.list {
 			.ktweet {
-				width: 48%;
+				width: calc(48% - 2px);
 			}
 		}
 		

@@ -6425,6 +6425,7 @@ CUSTOM MIXINS
         font-size: 12px;
         color: #777777;
         line-height: 2em;
+        padding-top: 1px;
         white-space: nowrap;
         letter-spacing: 0;
         border: none;
@@ -7120,16 +7121,17 @@ h1 {
       max-height: 100px; }
     #schools-partners .col-holder .quarter .stats, #details .col-holder .quarter .stats {
       padding: 0.625rem 0 0;
-      display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      display: -webkit-flex; }
       #schools-partners .col-holder .quarter .stats .number, #details .col-holder .quarter .stats .number {
         color: #669acb;
         font-family: "Oswald", sans-serif;
         font-weight: 700;
         font-size: 60px;
         line-height: 1em;
-        padding: 0 0.3125rem 0 0; }
+        padding: 0 0.3125rem 0 0;
+        -webkit-flex: 1 0 auto; }
         #schools-partners .col-holder .quarter .stats .number span, #details .col-holder .quarter .stats .number span {
           font-size: 40px;
           position: relative;
@@ -7161,9 +7163,9 @@ h1 {
 
 #details .col-holder {
   padding: 1.25rem 0 0;
-  display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  display: -webkit-flex; }
   #details .col-holder .quarter {
     width: 25%;
     float: left;
@@ -7345,9 +7347,9 @@ h1 {
         max-width: 200px;
         height: 100px;
         margin: 0 auto 1.5625rem;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        display: -webkit-flex;
         -webkit-justify-content: center;
             -ms-flex-pack: center;
                 justify-content: center;
@@ -7413,19 +7415,16 @@ a.standalone-link {
     color: #777777;
     font-size: 11px;
     line-height: 1.3em;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
+    /*display: flex;
+			display: -webkit-flex;
+  			flex-wrap: wrap;*/ }
     #social-feed .centered .kebo-tweets.list .ktweet {
       padding: 0.9375rem 0 0.75rem 0;
       background: #fff;
       padding: 1.25rem;
       position: relative;
       box-shadow: 0px 2px 12px 1px rgba(0, 0, 0, 0.2);
-      width: 23%;
+      width: calc(23% - 3px);
       margin: 1%;
       display: inline-block;
       vertical-align: top; }
@@ -7615,7 +7614,7 @@ a.standalone-link {
   .page-template-about .section:not(#about-hero)#skills-framework .list {
     max-width: 56.25rem;
     margin: 1.875rem auto 0; }
-  .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined {
+  .page-template-about .section:not(#about-hero)#skills-framework h4.lined {
     color: #afafaf;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
@@ -7624,80 +7623,86 @@ a.standalone-link {
     line-height: 1em;
     overflow: hidden;
     letter-spacing: 0.05em; }
-    .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined span {
+    .page-template-about .section:not(#about-hero)#skills-framework h4.lined span {
       display: inline-block;
       position: relative; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined span:before, .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined span:after {
+      .page-template-about .section:not(#about-hero)#skills-framework h4.lined span:before, .page-template-about .section:not(#about-hero)#skills-framework h4.lined span:after {
         content: "";
         position: absolute;
         height: 1px;
         background: #ccc;
         top: 50%;
         width: 400px; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined span:before {
+      .page-template-about .section:not(#about-hero)#skills-framework h4.lined span:before {
         right: 100%;
         margin-right: 10px; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks h4.lined span:after {
+      .page-template-about .section:not(#about-hero)#skills-framework h4.lined span:after {
         left: 100%;
         margin-left: 10px; }
-  .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder {
-    width: 33.33%;
-    float: left;
-    text-align: left;
-    padding: 0 0 1.25rem; }
-    .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block {
-      display: inline-block;
-      width: 88px;
-      height: 88px;
-      background: url("../images/sprites.png") 0 -75px no-repeat;
-      background-size: 250px auto;
-      padding: 15px 15px 0 0;
-      text-align: center;
-      overflow: hidden; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block:after {
-        content: '';
+  .page-template-about .section:not(#about-hero)#skills-framework .blocks {
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder {
+      width: 33.33%;
+      text-align: left;
+      padding: 0 0 1.25rem; }
+      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block {
         display: inline-block;
-        width: 42px;
-        height: 55px;
-        background: url("../images/sprites.png") 0 -175px no-repeat;
+        width: 88px;
+        height: 88px;
+        background: url("../images/sprites.png") 0 -75px no-repeat;
         background-size: 250px auto;
-        margin-top: 12px; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.planning:after {
-        background-position: 0 -250px;
-        width: 48px;
-        margin-top: 8px;
-        height: 60px; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.social:after {
-        background-position: 0 -325px;
-        width: 55px;
-        margin-top: 13px;
-        height: 50px; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.verbal:after {
-        background-position: 0 -375px;
-        width: 58px;
-        margin-top: 14px;
-        height: 50px; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.collaboration:after {
-        background-position: 0 -425px;
-        width: 50px;
-        height: 50px;
-        margin-top: 13px; }
-      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.problem:after {
-        background-position: 0 -500px;
-        width: 53px;
-        height: 50px;
-        margin-top: 11px; }
-    .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block-label {
-      display: inline-block;
-      width: calc(100% - 94px);
-      vertical-align: top;
-      color: #222;
-      font-size: 14px;
-      line-height: 50px;
-      padding: 0.9375rem 0 0 0.3125rem;
-      font-family: "Oswald", sans-serif;
-      font-weight: 700;
-      text-transform: uppercase; }
+        padding: 15px 15px 0 0;
+        text-align: center;
+        overflow: hidden; }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block:after {
+          content: '';
+          display: inline-block;
+          width: 42px;
+          height: 55px;
+          background: url("../images/sprites.png") 0 -175px no-repeat;
+          background-size: 250px auto;
+          margin-top: 12px; }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.planning:after {
+          background-position: 0 -250px;
+          width: 48px;
+          margin-top: 8px;
+          height: 60px; }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.social:after {
+          background-position: 0 -325px;
+          width: 55px;
+          margin-top: 13px;
+          height: 50px; }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.verbal:after {
+          background-position: 0 -375px;
+          width: 58px;
+          margin-top: 14px;
+          height: 50px; }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.collaboration:after {
+          background-position: 0 -425px;
+          width: 50px;
+          height: 50px;
+          margin-top: 13px; }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.problem:after {
+          background-position: 0 -500px;
+          width: 53px;
+          height: 50px;
+          margin-top: 11px; }
+      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block-label {
+        display: inline-block;
+        width: calc(100% - 94px);
+        vertical-align: top;
+        color: #222;
+        font-size: 14px;
+        line-height: 50px;
+        padding: 0.9375rem 0 0 0.3125rem;
+        font-family: "Oswald", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase; }
   .page-template-about .section:not(#about-hero)#performance-tasks {
     background-image: linear-gradient(185deg, #7fb34b, #72a53f);
     color: #fff; }
@@ -8512,9 +8517,9 @@ a.standalone-link {
     padding: 0 0 0 1.875rem; }
     .page-template-partners #parter-list .cat-container .right .post {
       border-bottom: 1px solid #dddddd;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      display: -webkit-flex;
       padding: 1.875rem 0; }
       .page-template-partners #parter-list .cat-container .right .post .logo {
         width: 130px;
@@ -8678,7 +8683,7 @@ a.standalone-link {
   #social-feed .centered h3 {
     font-size: 20px; }
   #social-feed .centered .kebo-tweets.list .ktweet {
-    width: 48%; }
+    width: calc(48% - 2px); }
   .page-template-about {
     font-size: 14px; }
     .page-template-about .section:not(#about-hero) h2 {

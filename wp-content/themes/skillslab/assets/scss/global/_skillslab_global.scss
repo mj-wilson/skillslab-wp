@@ -260,6 +260,7 @@ h1 {
 			.stats {
 				padding: rem-calc(10 0 0);
 				display: flex; 
+				display:-webkit-flex;
 				.number {
 					color: $blue;
 					font-family: $skinny-font;
@@ -267,6 +268,7 @@ h1 {
 					font-size: 60px;
 					line-height: 1em;
 					padding: 0 rem-calc(5px) 0 0;
+					-webkit-flex:1 0 auto;	
 					span {
 						font-size: 40px;
 						position: relative;
@@ -322,6 +324,7 @@ h1 {
  	.col-holder {
 		padding: rem-calc(20 0 0);
 		display: flex;
+		display:-webkit-flex;		
 		.quarter {
 			width: 25%;
 			float:left;
@@ -527,9 +530,10 @@ h1 {
 				max-width: 200px;
 				height: 100px;
 				margin: rem-calc(0 auto 25);
-				  display: flex;
-				  justify-content: center;
-				  align-items: center;
+				display: flex;
+				display: -webkit-flex;
+				justify-content: center;
+				 align-items: center;
 				img {
 					max-width: 100%;
 					max-height: 100%;
@@ -605,8 +609,9 @@ a.standalone-link {
 			color: $gray;
 			font-size: 11px;
 			line-height: 1.3em;
-			display: flex;
-  			flex-wrap: wrap;
+			/*display: flex;
+			display: -webkit-flex;
+  			flex-wrap: wrap;*/
 
 			.ktweet {
 				padding: rem-calc(15 0 12 0);
@@ -614,7 +619,7 @@ a.standalone-link {
 				padding: rem-calc(20);
 				position: relative;
 				box-shadow: 0px 2px 12px 1px rgba(0,0,0,0.2);
-				width: 23%;
+				width: calc(23% - 3px);
 				margin: 1%;
 				display: inline-block;
 				vertical-align: top;
@@ -835,41 +840,43 @@ a.standalone-link {
 			max-width: rem-calc(900);
 			margin: rem-calc(30 auto 0);
 		}
-		.blocks {
-			h4.lined {
-				color: $medium-gray;
-				font-family: $body-font-family;
-				font-weight: 700;
-				font-size: 18px;
-				margin: rem-calc(30 0 30);
-				line-height: 1em;
-				overflow: hidden;
-				letter-spacing: 0.05em;
-				span {
-					display: inline-block;
-				  	position: relative;  
-	   				&:before, 
-	   				&:after { 
-					  content: "";
-					  position: absolute;
-					  height: 1px;
-					  background:#ccc;
-					  top: 50%;
-					  width: 400px;
-					}
-					&:before {
-					  right: 100%;
-					  margin-right: 10px;
-					}
-					&:after {
-					  left: 100%;
-					  margin-left: 10px;
-					}
+		h4.lined {
+			color: $medium-gray;
+			font-family: $body-font-family;
+			font-weight: 700;
+			font-size: 18px;
+			margin: rem-calc(30 0 30);
+			line-height: 1em;
+			overflow: hidden;
+			letter-spacing: 0.05em;
+			span {
+				display: inline-block;
+			  	position: relative;  
+					&:before, 
+					&:after { 
+				  content: "";
+				  position: absolute;
+				  height: 1px;
+				  background:#ccc;
+				  top: 50%;
+				  width: 400px;
+				}
+				&:before {
+				  right: 100%;
+				  margin-right: 10px;
+				}
+				&:after {
+				  left: 100%;
+				  margin-left: 10px;
 				}
 			}
+		}
+		.blocks {
+			display: flex;
+			display: -webkit-flex;
+  			flex-wrap: wrap;
 			.block-holder {
 				width: 33.33%;
-				float:left;
 				text-align: left;
 				padding: rem-calc(0 0 20);
 				.block {
@@ -1909,6 +1916,7 @@ a.standalone-link {
 				.post {
 					border-bottom: 1px solid $line-gray;
 					display: flex;
+					display: -webkit-flex;
 					padding: rem-calc(30 0);
 					.logo {
 						width: 130px;

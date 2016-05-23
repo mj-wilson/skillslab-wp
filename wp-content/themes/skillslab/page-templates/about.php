@@ -98,8 +98,8 @@ get_header(); ?>
 			<div class="list">
 					<?php the_field('skills_framework'); ?>
 			
-				<div class="blocks clear">
 					<h4 class="lined"><span>SKILLS BUILDING BLOCKS</span></h4>
+				<div class="blocks clear">
 					<div class="block-holder revealme">
 						<div class="block mindset"></div>
 						<div class="block-label">PERSONAL MINDSET</div>
