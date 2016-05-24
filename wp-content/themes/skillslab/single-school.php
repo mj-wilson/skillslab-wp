@@ -22,6 +22,64 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
+<!-- School Innovation Section -->
+<section id="innovation" class="section secondary" role="main">
+	<div class="content">
+		<div class="centered clear">
+			<h2><span>School Innovation</span></h2>
+			<div class="left">
+				<div id="innovation-skills" class="skills">
+					<h3>21st Century Skills</h3>
+					<ul>
+						<?php $field = get_field_object('21st_century_skills');
+						$value = $field['value'];
+						$choices = $field['choices'];
+						if( $value ): foreach( $value as $v ): ?>
+
+						<li class="<?php echo $v; ?>">
+							<div class="block-holder">
+								<div class="block">
+								<?php  
+								switch ($v) {
+							    case 'personal-mindset':
+									get_template_part('template-parts/inline', 'personal-mindset.svg');
+							        break;
+							    case 'planning-success':
+									get_template_part('template-parts/inline', 'planning-success.svg');
+							        break;
+							    case 'social-awareness':
+									get_template_part('template-parts/inline', 'social-awareness.svg');
+							        break;
+							    case 'communication':
+									get_template_part('template-parts/inline', 'communication.svg');
+							        break;
+							    case 'collaboration':
+									get_template_part('template-parts/inline', 'collaboration.svg');
+							        break;
+							    case 'problem-solving':
+									get_template_part('template-parts/inline', 'problem-solving.svg');
+							        break;
+							}?>
+
+								</div>
+								<div class="block-label"><?php echo $choices[ $v ]; ?></div>
+							</div>
+						</li>
+						<?php endforeach; endif; ?>
+					</ul>
+				</div>	
+
+			</div>
+			<div class="right">
+				<h3><?php the_field('school_innovation_title'); ?></h3>
+				<h6>innovation description:</h6>
+				<?php the_field('school_innovation_description'); ?>
+			</div>
+
+		</div>
+	</div>
+</section>
+
 
 <!-- Performance Tasks Section -->
 <section id="tasks" class="section secondary" role="main">
@@ -138,63 +196,6 @@ get_header(); ?>
 	</div>
 </section>
 
-<!-- School Innovation Section -->
-<section id="innovation" class="section secondary" role="main">
-	<div class="content">
-		<div class="centered clear">
-			<h2><span>School Innovation</span></h2>
-			<div class="left">
-				<div id="innovation-skills" class="skills">
-					<h3>21st Century Skills</h3>
-					<ul>
-						<?php $field = get_field_object('21st_century_skills');
-						$value = $field['value'];
-						$choices = $field['choices'];
-						if( $value ): foreach( $value as $v ): ?>
-
-						<li class="<?php echo $v; ?>">
-							<div class="block-holder">
-								<div class="block">
-								<?php  
-								switch ($v) {
-							    case 'personal-mindset':
-									get_template_part('template-parts/inline', 'personal-mindset.svg');
-							        break;
-							    case 'planning-success':
-									get_template_part('template-parts/inline', 'planning-success.svg');
-							        break;
-							    case 'social-awareness':
-									get_template_part('template-parts/inline', 'social-awareness.svg');
-							        break;
-							    case 'communication':
-									get_template_part('template-parts/inline', 'communication.svg');
-							        break;
-							    case 'collaboration':
-									get_template_part('template-parts/inline', 'collaboration.svg');
-							        break;
-							    case 'problem-solving':
-									get_template_part('template-parts/inline', 'problem-solving.svg');
-							        break;
-							}?>
-
-								</div>
-								<div class="block-label"><?php echo $choices[ $v ]; ?></div>
-							</div>
-						</li>
-						<?php endforeach; endif; ?>
-					</ul>
-				</div>	
-
-			</div>
-			<div class="right">
-				<h3><?php the_field('school_innovation_title'); ?></h3>
-				<h6>innovation description:</h6>
-				<?php the_field('school_innovation_description'); ?>
-			</div>
-
-		</div>
-	</div>
-</section>
 
 <?php endwhile;?>
 

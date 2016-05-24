@@ -9,8 +9,9 @@ get_header(); ?>
 
 <!-- Hero Section -->
 <section id="home-hero" class="hero" role="main">
-	<div class="content">
-		<div class="headline">
+	
+	<div class="headline">
+		<div class="content">
 			<div class="titles revealme">
 				<?php the_content(); ?>
 			</div>
