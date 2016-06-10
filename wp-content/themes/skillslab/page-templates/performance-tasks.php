@@ -70,7 +70,7 @@ get_header(); ?>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
 				 			<div class="bottom clear">
-				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
+				 				<a class="standalone-link" href="<?php echo $link; ?>#tasks">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
 									<a target="_blank" href="<?php echo $download; ?>" class="sl-button">DOWNLOAD PROJECT PLAN </a>
@@ -124,7 +124,7 @@ get_header(); ?>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
 				 			<div class="bottom clear">
-				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
+				 				<a class="standalone-link" href="<?php echo $link; ?>#tasks">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
 									<a target="_blank" href="<?php echo $download; ?>" class="sl-button">DOWNLOAD PROJECT PLAN</a>
@@ -181,7 +181,7 @@ get_header(); ?>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
 				 			<div class="bottom clear">
-				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
+				 				<a class="standalone-link" href="<?php echo $link; ?>#tasks">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
 									<a target="_blank" href="<?php echo $download; ?>" class="sl-button">DOWNLOAD PROJECT PLAN</a>
@@ -235,7 +235,7 @@ get_header(); ?>
 				 			<p class="school"> <span>SCHOOL: </span><?php echo $school; ?></p>
 				 			<?php echo $summary; ?>
 				 			<div class="bottom clear">
-				 				<a class="standalone-link" href="<?php echo $link; ?>">view project page <i class="fa fa-chevron-right"></i></a>
+				 				<a class="standalone-link" href="<?php echo $link; ?>#tasks">view project page <i class="fa fa-chevron-right"></i></a>
 				 				<?php 
 					            if($download){ ?>
 									<a target="_blank" href="<?php echo $download; ?>" class="sl-button">DOWNLOAD PROJECT PLAN</a>
