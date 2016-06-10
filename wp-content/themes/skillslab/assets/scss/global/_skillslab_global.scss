@@ -1659,7 +1659,6 @@ a.standalone-link {
 		}
 		.right {
 			padding-top: rem-calc(40);
-			pa
 			&:before {
 				display:none;
 			}
@@ -1686,6 +1685,29 @@ a.standalone-link {
 					&:hover {
 						opacity:0.6;
 					}
+				}
+			}
+			.parnter-logo {
+				padding: rem-calc(20 0 0);
+				span {
+					display: inline-block;
+					vertical-align: middle;
+					color: #222;
+					font-size: 14px;
+					line-height: 1.1em;
+					padding: rem-calc(0 20px 20px 0);
+					font-family: $serif-font;
+					font-style: italic;
+					font-weight: 700;
+
+				}
+				img {
+					display: inline-block;
+					vertical-align: middle;
+					max-width: 125px;
+					height: auto;
+					border-left: 1px solid #e6e6e6;
+					padding: rem-calc(0 0 0 25px);
 				}
 			}
 		}
