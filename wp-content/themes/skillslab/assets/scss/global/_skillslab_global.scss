@@ -1617,6 +1617,10 @@ a.standalone-link {
 			}
 		}
 	&#tasks {
+		#performance-tasks {
+			position: relative;
+			top: -30px;
+		}
 		.centered {
 			padding-top: 0;
 			margin-top: -15px;
@@ -1655,6 +1659,7 @@ a.standalone-link {
 		}
 		.right {
 			padding-top: rem-calc(40);
+			pa
 			&:before {
 				display:none;
 			}

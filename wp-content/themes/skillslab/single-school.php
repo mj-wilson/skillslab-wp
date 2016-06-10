@@ -83,6 +83,7 @@ get_header(); ?>
 
 <!-- Performance Tasks Section -->
 <section id="tasks" class="section secondary" role="main">
+	<div id="performance-tasks"></div>
 	<div class="content">
 		<div class="centered clear">
 			<h2><span>Performance Tasks</span></h2>
