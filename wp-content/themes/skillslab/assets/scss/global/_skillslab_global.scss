@@ -2091,10 +2091,29 @@ a.standalone-link {
 					padding: rem-calc(0 20 0 0);
 					display: inline-block;
 					vertical-align: top;
+					position: relative;
 					img {
-						max-width: 100%;
+						width: 100%;
 						height: auto;
 						border-radius: 50%;
+					}
+					.headshot { 
+						display: block;
+						width: 200px;
+						height: 200px;
+						border-radius: 50%;
+						background: #ddd;
+						overflow: hidden;
+						text-align: center;
+						&:after {
+							color: #fff;
+							font-size: 180px;
+							content: "\f007";
+							font-family: 'FontAwesome';
+							position: relative;
+							top: -10px;
+						}
+
 					}
 				}
 				h3 {
@@ -2130,7 +2149,8 @@ a.standalone-link {
 						font-weight: 700;
 						font-family: $serif-font;
 						font-style: italic;
-						margin: 0 0 5px;
+						margin: 0 0 7px;
+						line-height: 1.2em;
 					}
 					.school {
 						font-family: $skinny-font;
@@ -2180,6 +2200,10 @@ a.standalone-link {
 						font-size: 14px;
 						color: $darker-gray;
 						position: relative;
+						a {
+							font-weight: bold;
+							border-bottom: 1px solid;
+						}
 						&:before {
 							content: '\201C';
 							font-family: 'Georgia';
@@ -2214,7 +2238,7 @@ a.standalone-link {
 						.block-holder {
 							display: inline-block;
 							width: 100px;
-							padding-top: 5px;
+							padding-top: 7px;
 							.block {
 								display: inline-block;
 								vertical-align: middle;
@@ -2231,6 +2255,10 @@ a.standalone-link {
 									fill:#fff;
 								}
 							}
+							.block:nth-child(2) {
+								margin-top:10px;
+							}
+
 						}
 						p {
 							display: inline-block;

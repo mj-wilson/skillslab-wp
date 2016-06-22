@@ -132,6 +132,23 @@
 		}
 	}
 }
+.page-template-skills-fellows, .page-template-project-leads {
+	#fellows-list {
+		.grid-container {
+			display: block;
+ 			.column {
+ 				width: 100%;
+ 				padding:0;
+ 			}
+ 			.bio-post {
+ 				border-right: none;
+ 				&:before {
+ 					display:none !important;
+ 				}
+ 			}
+ 		}
+ 	}
+ }
 
 
 /* end max-width 1024 */
@@ -815,5 +832,21 @@
 	}
 
 }
+.page-template-project-leads,.page-template-skills-fellows  {
+	#fellows-list .grid-container {
+		.bio-post {
+			padding-left: 0;
+			padding-right: 0;
+			 .bio-pic {
+				display: block;
+			}
+			.description {
+			    display: block;
+			    width: 100%;
+			}
+		}
+	}
+}
+
 /* end max-width 480 */
 }

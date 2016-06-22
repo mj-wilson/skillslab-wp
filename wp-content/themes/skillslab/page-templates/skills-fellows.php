@@ -39,7 +39,9 @@ get_header(); ?>
 					 	<div class="bio-pic">
 					 		<?php  if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
-							} ?>
+							} else { ?>
+								<div class="headshot"></div>
+							<?php } ?>
 
 					 	</div>
 					 	<div class="description">
@@ -52,14 +54,21 @@ get_header(); ?>
 				 			<h4>My Teaching Philosophy</h4>
 				 			<p class="teaching_philosophy"><?php the_field('teaching_philosophy'); ?></p>
 				 			<div class="building_block_spotlight_quote">
-				 				<?php 
-				 				$field = get_field_object('building_block_spotlight');
-								$v = get_field('building_block_spotlight'); ?>
+
+
+								<?php $field = get_field_object('building_block_spotlight');
+								$value = $field['value'];
+								$choices = $field['choices']; ?>
+								
 				 			
-				 				<h4>Building Block Spotlight: <span><?php
-									echo $field['choices'][ $v ];
-									?></span></h4>	
+				 				<h4>Building Block Spotlight: <span>
+				 				<?php if( $value ): foreach( $value as $k=>$v ): 
+				 				if($k) echo ', ';
+				 				echo $choices[ $v ]; 
+				 				endforeach; endif; ?>
+				 				</span></h4>	
 				 				<div class="block-holder">
+				 				<?php if( $value ): foreach( $value as $v ): ?>
 				 					<div class="block">
 									<?php 
 									switch ($v) {
@@ -83,7 +92,9 @@ get_header(); ?>
 								        break;
 									}?>
 									</div>									
+				 			<?php endforeach; endif; ?>
 				 				</div>
+
 				 				<p><?php the_field('building_block_spotlight_quote');  ?><span class="quote"></span></p>
 				 			</div>
 				 		</div>
