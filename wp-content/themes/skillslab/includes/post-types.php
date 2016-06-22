@@ -21,12 +21,29 @@ add_action( 'init', function() {
     );
     register_post_type( 'school', $args_schools );
 
+
     $args_performance_tasks = array(
       	'public' => true,
       	'label'  => 'Performance Tasks',
 		'supports'  => array( 'title', 'editor', 'thumbnail' )
     );
     register_post_type( 'performance_task', $args_performance_tasks );
+    
+    $args_project_leads = array(
+      	'public' => true,
+		'menu_icon' => 'dashicons-id-alt',
+      	'label'  => 'Project Leads',
+		'supports'  => array( 'title', 'editor', 'thumbnail' )
+    );
+    register_post_type( 'project_lead', $args_project_leads );
+
+    $args_skills_fellows = array(
+      	'public' => true,
+		'menu_icon' => 'dashicons-id-alt',
+      	'label'  => 'Skills Fellows',
+		'supports'  => array( 'title', 'editor', 'thumbnail' )
+    );
+    register_post_type( 'skills_fellows', $args_skills_fellows );
 
 	register_taxonomy(
 		'partner_type',

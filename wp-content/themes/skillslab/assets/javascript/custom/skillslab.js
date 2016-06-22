@@ -69,6 +69,12 @@ $( document ).ready(function() {
 	   $(this).parent().toggleClass('open');
 	});
 
+	$('.bio-post:nth-child(even)').appendTo( $( ".column.right" ) );
+
+	$('.bio-post').on( "click", ".toggle", function() {
+		$(this).toggleClass('open');
+		$(this).parent().next('.show-hide').slideToggle();
+	});
 
 });
 
