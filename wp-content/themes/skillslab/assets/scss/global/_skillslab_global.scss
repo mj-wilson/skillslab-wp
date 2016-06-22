@@ -2084,7 +2084,7 @@ a.standalone-link {
 			.bio-post {
 				border-top: 1px solid $line-gray;
 				border-right:  1px solid $line-gray;
-				padding: rem-calc(30 50);
+				padding: rem-calc(30 45 30 50);
 				position: relative;
 				.bio-pic {
 					width: 220px;
@@ -2115,7 +2115,7 @@ a.standalone-link {
 				}
 				.description {
 					display: inline-block;
-					padding: rem-calc(30 0 0);
+					padding: rem-calc(30 0 25);
 					width: calc(100% - 225px);
 					position: relative;
 					p {
@@ -2356,7 +2356,7 @@ a.standalone-link {
 					color: $gray;
 				}
 				.show-hide {
-					padding: rem-calc(25 0 0);
+					padding:0;
 					> p {
 						color: $gray;
 						&:before {
