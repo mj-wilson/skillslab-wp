@@ -2388,7 +2388,7 @@ a.standalone-link {
 					padding:0;
 					> p {
 						color: $gray;
-						&:before {
+						&:before, &:after {
 							display:none;
 						}
 					}
