@@ -2047,13 +2047,13 @@ a.standalone-link {
 		transition-delay: calc(0.2s * #{$i});
 	}
 }
-.page-template-skills-fellows, .page-template-project-leads {
+.page-template-skills-fellows, .page-template-project-leads, .single-skills_fellows, .single-project_lead {
 	#fellows-hero {
 		background: $green;
 		.centered {
-			max-width: 850px;
+			max-width: 1050px;
 			margin: auto;
-			padding: rem-calc(50 0);
+			padding: rem-calc(45 0 50);
 		}
 		h1 {
 			color: #fff;
@@ -2187,8 +2187,11 @@ a.standalone-link {
 
 				}
 				.show-hide {
+					display: none;					
+				}
+				.additional-content {
 					padding: 30px 0 0 0;
-					display: none;
+
 					h4 {
 						text-transform: uppercase;
 						color: $green;
@@ -2230,6 +2233,7 @@ a.standalone-link {
 						h4 {
 							color: #fff;
 							font-size: 16px;
+							line-height: 1.3em;
 							letter-spacing: 0.05em;
 							span {
 								font-family: $body-font-family;
@@ -2298,12 +2302,18 @@ a.standalone-link {
 							
 						}
 					}
+					.link {
+						text-align: right;
+						a {
+							color: $gray;
+						}
+					}
 				}
 			&:first-child {
 				border-top: none;
 			}	
 			&:nth-child(3n + 2) {
-				.show-hide {
+				.additional-content {
 					> h4 {
 						color: $blue;
 					}
@@ -2313,7 +2323,7 @@ a.standalone-link {
 				}
 			}	
 			&:nth-child(3n) {
-				.show-hide {
+				.additional-content {
 					> h4 {
 						color: $orange;
 					}
@@ -2322,8 +2332,44 @@ a.standalone-link {
 					}
 				}
 			}	
+			&#bio-210 {
+				 .additional-content > p {
+				 	&:before, &:after {
+				 		display:none;
+				 	}
+				 }
+			}
 
 			}
+
+ 			.column.left {
+	 			.bio-post{
+	 				&:nth-child(even) {
+						display: none;
+					}
+					&:nth-child(6n + 3) {
+						.additional-content {
+							> h4 {
+								color: $blue;
+							}
+							.building_block_spotlight_quote {
+								background: $blue;
+							}
+						}
+					}	
+					&:nth-child(6n + 5) {
+						.additional-content {
+							> h4 {
+								color: $orange;
+							}
+							.building_block_spotlight_quote {
+								background: $orange;
+							}
+						}
+					}	
+				}
+ 			}
+ 			
  			.column.right {
  				.bio-post {
  					border-right: none;
@@ -2338,7 +2384,7 @@ a.standalone-link {
  						background: $line-gray;
  					}
 				&:nth-child(3n) {
-					.show-hide {
+					.additional-content {
 						> h4 {
 							color: $blue;
 						}
@@ -2348,7 +2394,7 @@ a.standalone-link {
 					}
 				}	
 				&:nth-child(3n + 2) {
-					.show-hide {
+					.additional-content {
 						> h4 {
 							color: $green;
 						}
@@ -2358,7 +2404,7 @@ a.standalone-link {
 					}
 				}	
 				&:nth-child(3n + 1) {
-					.show-hide {
+					.additional-content {
 						> h4 {
 							color: $orange;
 						}
@@ -2374,17 +2420,20 @@ a.standalone-link {
 
 	}
 }
- .page-template-project-leads {
+ .page-template-project-leads, .single-project_lead {
  	#fellows-list {
 
 		.grid-container {
 			.bio-post {
 				padding: rem-calc(30 30);
-				.description p {
+				.bio-pic img {
+					margin-bottom: rem-calc(15);
+				}
+				.description p{
 					margin: rem-calc(10 0 0);
 					color: $gray;
 				}
-				.show-hide {
+				.additional-content {
 					padding:0;
 					> p {
 						color: $gray;
@@ -2396,4 +2445,60 @@ a.standalone-link {
 			}
 		}
 	}
+ }
+ .single-skills_fellows, .single-project_lead {
+  	#fellows-list {
+
+		.grid-container {
+			max-width: 1100px;
+			margin: auto;
+			display: block;
+			.bio-post {
+				padding:0;
+				border:none;
+				display: flex;
+				display: -webkit-flex;
+				.top {
+					width: 45%;
+					border-right: 1px solid $line-gray;
+					padding: rem-calc(0 30 0 0);
+				}
+				.additional-content {
+					width: 55%;
+					padding: rem-calc(35 0 20 60);
+					.building_block_spotlight_quote p {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.navigation {
+			text-align: left;
+			a {
+				color: #777;
+			}
+		}
+	}
+	
+ }
+.single-project_lead {
+  	#fellows-list {
+		.grid-container {
+			.bio-post {
+				.top {
+					padding: rem-calc(0 40 0 0);
+					.current-role p {
+						margin: rem-calc(10 0 0);
+						color: $gray;
+						font-size: 14px;
+						line-height: 1.5em;
+					}
+				}
+				.additional-content {
+					padding: rem-calc(35 0 20 40);
+				}
+			}
+		}
+	}
+	
  }

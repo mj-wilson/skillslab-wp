@@ -35,7 +35,7 @@ get_header(); ?>
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); 
 					?>
-				 	<div class="bio-post revealme">
+				 	<div class="bio-post revealme" id="bio-<?php the_ID(); ?>" >
 					 	<div class="bio-pic">
 					 		<?php  if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
@@ -50,7 +50,7 @@ get_header(); ?>
 					 		<div class="school"><?php the_field('school_name'); ?></div>
 					 		<div class="toggle"></div>
 					 	</div>
-				 		<div class="show-hide clear">
+				 		<div class="show-hide additional-content clear">
 				 			<h4>My Teaching Philosophy</h4>
 				 			<p class="teaching_philosophy"><?php the_field('teaching_philosophy'); ?></p>
 				 			<div class="building_block_spotlight_quote">
@@ -96,7 +96,12 @@ get_header(); ?>
 				 				</div>
 
 				 				<p><?php the_field('building_block_spotlight_quote');  ?><span class="quote"></span></p>
+
 				 			</div>
+				 			<div class="link">
+				 				<a class="standalone-link"  href="<?php the_permalink(); ?>">view bio page <i class="fa fa-chevron-right"></i></a>
+				 			</div>
+				 			
 				 		</div>
 					</div>
 				<?php endwhile; ?>

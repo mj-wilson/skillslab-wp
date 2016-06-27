@@ -48,7 +48,7 @@ get_header(); ?>
 					 		<?php the_content(); ?>
 					 		<div class="toggle"></div>
 					 	</div>
-				 		<div class="show-hide clear">
+				 		<div class="show-hide additional-content clear">
 				 			<h4>21st Century Skills Building Initiative</h4>
 				 			<?php the_field('21st_century_skills_building_initiative'); ?>
 				 			<div class="building_block_spotlight_quote">
@@ -86,6 +86,10 @@ get_header(); ?>
 				 				</div>
 				 				<p><?php the_field('building_block_spotlight_quote');  ?><span class="quote"></span></p>
 				 			</div>
+				 			<div class="link">
+				 				<a class="standalone-link"  href="<?php the_permalink(); ?>">view bio page <i class="fa fa-chevron-right"></i></a>
+				 			</div>
+				 		
 				 		</div>
 					</div>
 				<?php endwhile; ?>

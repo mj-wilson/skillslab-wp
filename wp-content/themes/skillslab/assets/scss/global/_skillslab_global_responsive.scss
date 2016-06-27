@@ -133,21 +133,83 @@
 	}
 }
 .page-template-skills-fellows, .page-template-project-leads {
+	#fellows-hero p {
+		font-size: 14px;
+	}
+
 	#fellows-list {
 		.grid-container {
 			display: block;
- 			.column {
+ 			.column.left { 
  				width: 100%;
  				padding:0;
+ 				.bio-post { 
+ 					display: block !important;
+	 				border-right: none;
+	 				&:before {
+	 					display:none !important;
+	 				}
+	 				&:nth-child(3n) {
+						.additional-content {
+							> h4 {
+								color: $blue;
+							}
+							.building_block_spotlight_quote {
+								background: $blue;
+							}
+						}
+					}	
+					&:nth-child(3n + 1) {
+						.additional-content {
+							> h4 {
+								color: $green;
+							}
+							.building_block_spotlight_quote {
+								background: $green;
+							}
+						}
+					}	
+					&:nth-child(3n + 2) {
+						.additional-content {
+							> h4 {
+								color: $orange;
+							}
+							.building_block_spotlight_quote {
+								background: $orange;
+							}
+						}
+					}	
+				}
  			}
- 			.bio-post {
- 				border-right: none;
- 				&:before {
- 					display:none !important;
- 				}
+ 			.column.right {
+ 				display: none;
  			}
+
  		}
  	}
+ }
+ .single-skills_fellows, .single-project_lead {
+	#fellows-hero p {
+		font-size: 14px;
+	}
+  	#fellows-list {
+		.grid-container {
+			.bio-post {
+				display: block;
+				padding: rem-calc(0 20);
+				.top {
+					width: 100%;
+					border: none;
+					padding: 0;
+				}
+				.additional-content {
+					width: 100%;
+					padding: rem-calc(35 0 0);
+				}
+			}
+		}
+	}
+	
  }
 
 
@@ -832,21 +894,51 @@
 	}
 
 }
-.page-template-project-leads,.page-template-skills-fellows  {
+.page-template-project-leads,.page-template-skills-fellows, .single-skills_fellows, .single-project_lead  {
 	#fellows-list .grid-container {
 		.bio-post {
 			padding-left: 0;
 			padding-right: 0;
 			 .bio-pic {
 				display: block;
+				margin: auto;
+				padding:0;
+				img {
+					margin: 0;
+				}
 			}
 			.description {
 			    display: block;
 			    width: 100%;
+			    text-align: center;
+			    h3:after {
+			    	margin: 10px auto;
+			    }
+			    p {
+			    	text-align: left;
+			    	margin-top: rem-calc(15);
+			    }
 			}
+			.additional-content {
+				padding: 0;
+			}
+		}	
+	}
+}
+.single-skills_fellows, .single-project_lead  {
+	#fellows-list .grid-container {
+		.bio-post {
+			.top {
+				.current-role p {
+					margin: rem-calc(0);
+				}
+			}
+			.additional-content {
+				padding: rem-calc(25 0 0);
+			}
+
 		}
 	}
 }
-
 /* end max-width 480 */
 }
