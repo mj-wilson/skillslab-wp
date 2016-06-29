@@ -182,9 +182,12 @@ get_header(); ?>
 			        <?php setup_postdata($post); ?>
 			        <div class="task-container" data-index="<?php echo $i; ?>">
 			            <h6>Project Title: <span><?php the_title(); ?></span></h6>
+			            <?php $question = get_field('driving_question'); 
+			            if ($question) { ?>
 			            <div class="question">
-			            	<h6>DRIVING QUESTION: <span><?php the_field('driving_question'); ?></span></h6>
+			            	<h6>DRIVING QUESTION: <span><?php echo $question; ?></span></h6>
 			            </div>
+			            <?php } ?>
 			            <h6>OVERVIEW AND PURPOSE:</h6>
 			            <?php the_content(); ?>
 			            <?php $link = get_field('project_plan_document'); 

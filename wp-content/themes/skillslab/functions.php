@@ -39,3 +39,33 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
+
+function my_excerpt($text, $excerpt){
+ if ($excerpt) return $excerpt;
+$text = strip_shortcodes( $text );
+$text = apply_filters('the_content', $text);
+ $text = str_replace(']]>', ']]&gt;', $text);
+ $text = strip_tags($text);
+ $excerpt_length = apply_filters('excerpt_length', 60);
+ $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+ $words = preg_split("/[\n
+ ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+ if ( count($words) > $excerpt_length ) {
+ array_pop($words);
+ $text = implode(' ', $words);
+ $text = $text . '...';
+ } else {
+ $text = implode(' ', $words);
+ }
+return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+}
+
+function get_opengraph_image() {
+ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '', '' );
+ if ( has_post_thumbnail($post->ID) ) {
+ $ogimage = $src[0];
+ } else {
+ $ogimage = "http://www.nycskillslab.org/wp-content/themes/skillslab/assets/images/svgs/skills-lab-GE-logo.svg";
+ }
+ return $ogimage;
+}
