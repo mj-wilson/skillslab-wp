@@ -65,7 +65,7 @@ function get_opengraph_image() {
  if ( has_post_thumbnail($post->ID) ) {
  $ogimage = $src[0];
  } else {
- $ogimage = "http://www.nycskillslab.org/wp-content/themes/skillslab/assets/images/svgs/skills-lab-GE-logo.svg";
+ $ogimage = "http://www.nycskillslab.org/wp-content/themes/skillslab/assets/images/skills-lab-GE-logo.jpg";
  }
  return $ogimage;
 }
