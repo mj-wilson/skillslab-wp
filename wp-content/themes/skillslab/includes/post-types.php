@@ -45,6 +45,14 @@ add_action( 'init', function() {
     );
     register_post_type( 'skills_fellows', $args_skills_fellows );
 
+    $args_partnership_schools = array(
+      	'public' => true,
+		'menu_icon' => 'dashicons-building',
+      	'label'  => 'Partnership Schools',
+		'supports'  => array( 'title', 'editor', 'thumbnail' )
+    );
+    register_post_type( 'partnership-school', $args_partnership_schools );
+
 	register_taxonomy(
 		'partner_type',
 		'partner',

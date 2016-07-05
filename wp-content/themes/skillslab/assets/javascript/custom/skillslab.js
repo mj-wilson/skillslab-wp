@@ -1,4 +1,6 @@
 
+// school pages: render & update skill blocks based on selected task
+
 $('.index ul li').click(function(){
 	$(this).siblings().removeClass('active');
 	$(this).addClass('active');
@@ -75,6 +77,5 @@ $( document ).ready(function() {
 		$(this).toggleClass('open');
 		$(this).parent().next('.show-hide').slideToggle();
 	});
-
 });
 

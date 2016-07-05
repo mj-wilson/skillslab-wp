@@ -1217,7 +1217,7 @@ a.standalone-link {
 
 	}
 }
-.single-school {
+.single-school, .single-partnership-school {
 	.hero {
 		@include linearGradient(185deg, #7fb34b, #72a53f);
 		color: #fff;
@@ -1688,7 +1688,7 @@ a.standalone-link {
 					}
 				}
 			}
-			.parnter-logo {
+			.partner-logo {
 				padding: rem-calc(20 0 0);
 				span {
 					display: inline-block;
@@ -2502,3 +2502,184 @@ a.standalone-link {
 	}
 	
  }
+
+.single-partnership-school {
+	.hero {
+		@include linearGradient(185deg, $blue, #5487B2);
+		color: #fff;
+		position: relative;
+		.parnter-logo {
+			padding: rem-calc(0 0 30 );
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 18px;
+				line-height: 1.1em;
+				padding: rem-calc(0 20px 20px 0);
+				font-family: $serif-font;
+				font-style: italic;
+				font-weight: 700;
+
+			}
+			.logo-wrapper{
+				border-left: 1px solid rgba(255,255,255,0.25);
+				padding: rem-calc(0 0 0 25 );
+				display: inline-block;
+				vertical-align: middle;
+				    img {
+					max-width: 100px;
+					height: auto;
+					border-radius: 50%;
+					box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.075);
+				}
+			}
+		}
+
+	}
+	.secondary {
+		
+	&#innovation {
+		h2 span:before {
+			content:"";
+			background: #fff  url(../images/svgs/block-collaboration.svg) center 40%  no-repeat;
+			background-size: 65% auto;
+			transform: rotate(0deg);
+		}
+		.right {
+			padding-top: rem-calc(40);
+			&:before {
+				display:none;
+			}
+			h3 {
+				font-family: $serif-font;
+				font-style: italic;
+				color: $gray;
+				font-size: 20px;
+				margin: rem-calc(0 0 15);
+			}
+			p {
+				font-size: 14px;
+				a {
+					color: inherit;
+					font-weight: bold;
+					text-decoration: underline;
+					@include transition(all 0.3s ease);
+					&:hover {
+						opacity:0.6;
+					}
+				}
+			}
+		}
+		.navigation {
+			padding-bottom: rem-calc(60);
+			a {
+				color: $gray;
+			}
+		}
+
+	}
+
+}
+}
+
+.page-template-integrated-partnership-schools {
+	.hero {
+		background: $blue;
+		.centered {
+			max-width: 1050px;
+			margin: auto;
+			padding: rem-calc(45 0 50);
+		}
+		h1 {
+			color: #fff;
+		}
+		p {
+			font-size: rem-calc(16);
+			line-height: 1.5;
+			color: #fff;
+			letter-spacing: 0.04em;
+			margin: rem-calc(15 0 0);
+			strong {
+				text-transform: uppercase;
+
+			}
+		}
+	}
+	#schools-list {
+		.centered {
+			margin: auto;
+		}
+		.grid-container {
+			text-align: left;
+			display: flex;
+			display: -webkit-flex;
+  			flex-wrap: wrap;
+			.school-post {
+ 				width: 50%;
+				border-top: 1px solid $line-gray;
+				border-right:  1px solid $line-gray;
+				padding: rem-calc(40 50);
+				position: relative;
+				.top {
+					text-align: center;
+					padding: rem-calc(0 0 30);
+					h3 {
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: rem-calc(26);
+						line-height: 1.2em;
+						color: $green;
+						display: inline-block;
+						vertical-align: middle;
+						width: calc(75% - 150px);
+						margin: 0;
+					}
+					.partner-logo{
+						width: 150px;
+						display: inline-block;
+						vertical-align: middle;
+						    img {
+							max-width: 125px;
+							height: auto;
+							border-radius: 50%;
+							box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.075);
+							background: gray;
+						}
+					}
+					.plus {
+						display: inline-block;
+						vertical-align: middle;
+						width: 10%;
+						color: #aaa;
+						font-family: $body-font-family;
+						font-weight: bold;
+						font-size: rem-calc(40);
+
+					}
+
+				}
+
+				.description {
+					p {
+						font-size: 14px;
+						line-height: 1.5em;
+						color: $dark-gray;
+						margin: rem-calc(0 0 20);
+					}
+				}
+				.link  {
+					text-align: right;
+					a {
+						color: $dark-green;
+					}
+				}
+				&:nth-child(even) {
+					border-right:none;
+				}
+				&:first-child, &:nth-child(2) {
+					border-top: none;
+				}
+			}
+		}
+	}
+}

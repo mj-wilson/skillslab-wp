@@ -109,7 +109,7 @@
 	}
 	}
 }
-.single-school {
+.single-school, .single-partnership-school {
 	
 	#tasks h2 {
 		margin: 0;
@@ -212,6 +212,41 @@
 	
  }
 
+ .page-template-integrated-partnership-schools {
+	.hero p {
+		font-size: 14px;
+	}
+  	#schools-list {
+		.grid-container {
+			.school-post {
+				display: block;
+				width: 100%;
+				padding: rem-calc(50 10);
+				border-right: none !important;
+				border-top: 1px solid $line-gray !important;
+				.top {
+					text-align: center;
+					padding: rem-calc(0 0 30);
+					h3 {
+						width: 45%;
+					}
+					.partner-logo{
+						width: 40%;
+						text-align: left;
+						padding-left: 20px;
+					}
+					.plus {
+						width: 10%;
+					}
+				}
+			&:first-child {
+				border-top: none !important;
+				padding-top:0;
+			}
+			}
+		}
+	}	
+ }
 
 /* end max-width 1024 */
 }
@@ -529,12 +564,12 @@
 
 @media all and (max-width: 767px) {
 
-	.single-school {
+	.single-school, .single-partnership-school {
 		.hero {
 			.left {
 				float: none;
 				width: 100%;
-				padding: rem-calc(0);
+				padding: rem-calc(0 0 20);
 			}
 			.right {
 				padding: rem-calc(0);
@@ -638,7 +673,10 @@
 	
 	}
 
-
+	.single-partnership-school h2 span{
+	    padding: rem-calc(0 0 0 60);
+	    display: inline-block;
+	}
 /* end max-width 767 */
 }
 
@@ -871,29 +909,30 @@
 
 	}
 }
-.single-school  .secondary  .right .task-container {
-
-	.question {
-		margin: rem-calc(20 12 30 0);
-		&:after {
-			width: 37px;
-			height: 16px;
-			background-position:  0 -287px;
-			background-size: 125px auto;
+.single-school,.single-partnership-school {
+	.secondary  .right .task-container {
+		.question {
+			margin: rem-calc(20 12 30 0);
+			&:after {
+				width: 37px;
+				height: 16px;
+				background-position:  0 -287px;
+				background-size: 125px auto;
+			}
 		}
-	}
-	&:nth-child(2){
-		.question:after {
-			background-position: 0px -312px;
+		&:nth-child(2){
+			.question:after {
+				background-position: 0px -312px;
+			}
 		}
-	}
-	&:nth-child(3){
-		.question:after {
-			background-position: 0px -337px;
-		}		
-	}
+		&:nth-child(3){
+			.question:after {
+				background-position: 0px -337px;
+			}		
+		}
 
-}
+	}
+} 
 .page-template-project-leads,.page-template-skills-fellows, .single-skills_fellows, .single-project_lead  {
 	#fellows-list .grid-container {
 		.bio-post {
@@ -940,5 +979,31 @@
 		}
 	}
 }
+ .page-template-integrated-partnership-schools {
+  	#schools-list {
+		.grid-container {
+			.school-post {
+				.top {
+					h3 {
+						width: 45%;
+						font-size: 22px;
+					}
+					.partner-logo{
+						width: 40%;
+						text-align: left;
+						padding-left: 10px;
+						img {
+							max-width: 90%;
+						}
+					}
+					.plus {
+						width: 10%;
+					}
+				}
+			}
+		}
+	}	
+ }
+
 /* end max-width 480 */
 }
