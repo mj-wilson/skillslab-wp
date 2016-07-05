@@ -25,6 +25,8 @@ get_header(); ?>
 				<?php } ?>
 				<?php the_content(); ?>
 				<a class="standalone-link" target="_blank" href="<?php the_field('school_website_url'); ?>">visit school website <i class="fa fa-chevron-right"></i></a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a class="standalone-link" target="_blank" href="<?php the_field('partner_website_url'); ?>">visit partner website <i class="fa fa-chevron-right"></i></a>
 			</div>
 		</div>
 	</div>
