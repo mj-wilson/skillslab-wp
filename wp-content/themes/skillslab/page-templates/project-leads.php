@@ -11,7 +11,6 @@ get_header(); ?>
 <section id="fellows-hero" class="hero section" role="main">
 	<div class="content revealme">
 		<div class="centered">
-				<h1>Project Leads</h1>
 				<?php the_content(); ?>
 		</div>
 	</div>

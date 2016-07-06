@@ -76,7 +76,7 @@ get_header(); ?>
 				<?php the_field('school_innovation_description'); ?>
 				<?php $logo = get_field('school_partner_logo'); 					 		
 				    if($logo){ ?>
-						<div class="parnter-logo">	
+						<div class="partner-logo">	
 							<span>School Partner</span> <img src="<?php echo $logo; ?>"/>
 						</div>	
 				<?php } ?>
