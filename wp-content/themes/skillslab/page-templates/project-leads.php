@@ -21,7 +21,9 @@ get_header(); ?>
 <section id="fellows-list" class="section" role="main">
 	<div class="content clear">
 		<div class="centered">
-			
+			<div class="intro">
+				<?php the_field('meet_the_project_leads'); ?>
+			</div>
 			<div class="grid-container clear">
 				<div class="column left">
 				<?php 

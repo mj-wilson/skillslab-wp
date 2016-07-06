@@ -2074,6 +2074,24 @@ a.standalone-link {
 		.centered {
 			margin: auto;
 		}
+		.intro {
+			max-width: 1050px;
+			margin: auto;
+			padding: rem-calc(0 0 20);
+			h1 {
+				font-family: $body-font-family;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: rem-calc(24);
+				letter-spacing: 0.03em;
+			}				
+			p {
+					color: $gray;
+					font-style: italic;
+					font-size: 15px;
+				}
+
+		}
 		.grid-container {
 			text-align: left;
 			display: flex;
