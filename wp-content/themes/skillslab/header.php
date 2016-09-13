@@ -15,6 +15,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
+		<meta name="description" content="NYC Skills Lab, an initiative funded by the GE Foundation and managed by DOE’s Office of Postsecondary Readiness, focuses on the integration of 21st century skills into student learning experiences.">
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/favicon.ico" type="image/x-icon">
 
 		<?php 
