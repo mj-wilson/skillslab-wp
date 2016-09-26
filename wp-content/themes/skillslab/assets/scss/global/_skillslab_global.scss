@@ -123,7 +123,7 @@ h1 {
 		.third {
 			width: 33.33%;
 			float: left;
-			padding: rem-calc(0 10 0 0);
+			padding: rem-calc(0 10 15 0);
 			p {
 				color: $orange;
 				margin: rem-calc(18) 0 0;
@@ -145,7 +145,8 @@ h1 {
 				padding: rem-calc(0 0 0 10);
 				img,svg {
 					float:left;
-					margin: 0 20px 15px 0;
+					max-width: 95px;
+					margin: 0 20px 4px 0; 
 					.r1 {
 				    -webkit-animation: grow1 2s infinite ;
 				    -moz-animation: grow1 2s infinite ;
