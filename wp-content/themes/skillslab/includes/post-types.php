@@ -73,7 +73,13 @@ add_action( 'init', function() {
 		)
 	);
 
-
+    $args_videos = array(
+      	'public' => true,
+		'menu_icon' => 'dashicons-video-alt3',
+      	'label'  => 'Videos',
+		'supports'  => array( 'title', 'editor', 'thumbnail' )
+    );
+    register_post_type( 'video', $args_videos );
 
 } );
 

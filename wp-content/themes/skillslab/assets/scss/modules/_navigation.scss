@@ -41,7 +41,7 @@
   .top-bar-right {
     float: left;
     width: calc(100% - 200px);
-    padding: rem-calc(35 0 0 40);
+    padding: rem-calc(35 0 0 10);
     li {
       display: inline-block;
       vertical-align: top;
@@ -51,10 +51,10 @@
         font-family: $skinny-font;
         color: $gray;
         font-weight: 400;
-        font-size: rem-calc(18);
+        font-size: rem-calc(17);
         line-height: 32px;
         text-transform: uppercase;
-        letter-spacing: 0.065em;
+        letter-spacing: 0.05em;
         text-shadow: 1px 1px 0 #fff;
         border-bottom: 4px solid rgba(0,0,0,0);
         padding: 0;
@@ -76,7 +76,7 @@
       text-shadow: none;
       line-height: 40px;
       height: 40px;
-      padding: rem-calc(0 40 0 20);
+      padding: rem-calc(0 40 0 15);
       margin-top: -4px;
       @include transition(opacity .3s ease);
       &:after {
@@ -133,7 +133,7 @@
   }
 
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .top-bar {
     .top-bar-left {
       width: 120px;
@@ -143,8 +143,17 @@
     }
     .top-bar-right {
       width: calc(100% - 120px);
-      padding: rem-calc(15 0 0 10);
+      padding: rem-calc(15 0 0 0);
       text-align: right;
+      .desktop-menu {
+        text-align: left;
+      }
+      li {
+        margin: 0 rem-calc(5);
+        a {
+          font-size: 16px;
+        }
+      }
       #mobile-menu {
 
         .mobile-nav-toggle {

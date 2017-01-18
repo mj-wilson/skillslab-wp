@@ -106,46 +106,90 @@ h1 {
 		background: $white-gray;
 	}
 }
+#overview-video {
+	background-color: $green;
+	background-image: linear-gradient(185deg, #7fb34b, #72a53f);
+	.content {
+		padding:0;
+		max-width: 100%;
+	}
+	p {
+		margin: 0;
+	}
+}
+.infographic-holder {
+	@media all and (max-width: 768px) { 
+		display:none;
+	}
+}
+.infographic-image-holder {
+	display: none;
+	@media all and (max-width: 768px) { 
+		display:block;
+	}
+}
 .infographic {
-	max-width: 850px;
+	max-width: 1000px;
 	margin: 40px auto 0;
 	border: 1px solid $light-gray;
-	padding: rem-calc(25);
+	padding: rem-calc(35);
 	h3 {
 		font-weight: 700;
 		text-transform: uppercase;
 		font-family: $body-font-family;
-		font-size: 26px;
-		color:#848484;
-		margin: 0 0 rem-calc(20);
+		font-size: 22px;
+		color: $blue;
+		letter-spacing: 0.04em;
+		margin: 0 auto rem-calc(20);
+		width: 160px;
+		height: 36px;
+		line-height: 30px;
+		background: #fff;
+		border: 2px solid $blue;
+		box-shadow: 0px 0px 0px 16px #fff;
+
+		&.problem {
+			color: $orange;
+			border-color: $orange;
+		}
+		&.strategies {
+			color: #37824C;
+			border-color: #37824C;
+			width: 180px;
+		}
 	}
 	.top {
-		.third {
-			width: 33.33%;
+		background: url(../images/svgs/vshape.svg) center 2px no-repeat;
+		background-size: 580px auto;
+
+		.half {
+			width: 50%;
 			float: left;
-			padding: rem-calc(0 10 15 0);
+			padding: rem-calc(0 100 0 0);
 			p {
 				color: $orange;
 				margin: rem-calc(18) 0 0;
-				text-align: left;
+				text-align: center;
 				font-size: 15px;
-				line-height: 1.3em;
+				line-height: 1.6em;
+				font-weight: 600;
 			}
 			svg {
 				display: block;
 				margin: auto;
 				max-width: 100%;
+				max-height: 102px;
 				.not {
 				    -webkit-animation: flash 1s infinite alternate;
 				    -moz-animation: flash 1s infinite alternate;
 				    -animation: flash 1s infinite alternate;
 				}
 			}
+
 			&.right {
-				padding: rem-calc(0 0 0 10);
+				padding: rem-calc(0 0 0 130);
 				img,svg {
 					float:left;
-					max-width: 95px;
 					margin: 0 20px 4px 0; 
 					.r1 {
 				    -webkit-animation: grow1 2s infinite ;
@@ -166,84 +210,78 @@ h1 {
 				p {
 					color: $blue;
 					margin:0;
+					text-align: left;
 				}
 			}
-			&.middle {
-				padding: rem-calc(0 30px);
-				p {
-					color: $green;
-					text-align: center;
-					margin:0;
-				}
-			}
-		}
-	}
-	.drivers {
-		padding: rem-calc(40 0);
-		h3 {
-			margin: 0;
-		    -webkit-animation: pulse 1s infinite alternate;
-		    -moz-animation: pulse 1s infinite alternate;
-		    -animation: pulse 1s infinite alternate;
-		}
-
-	}
-	.green-bubble {
-		background: $mint;
-		border-radius: 6px;
-		color: $green;
-		padding: rem-calc(20 30 25);
-		text-align: center;
-		position: relative;
-		&:after {
-			content: '';
-			background: $mint;
-			display: block;
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			width: 10px;
-			height: 30px;
-			margin-left: -5px;
-		}
-		p {
-			margin:0;
-			font-size: 15px;
-			line-height: 1.3em;
-			font-weight: 600;
 		}
 	}
 	.bottom {
-		.mobile-only {
-			display: none;
-		}
-		.half {
-			width: 50%;
-			float: left;
-			padding: 0 rem-calc(80) 0 0;
-			.green-bubble {
-				&:after {
-					top: -45px;
-				    right: 10px;
-				    margin: 0;
-				    left: auto;
-					transform: rotate(55deg);
-					height: 70px
-				}
-
+		padding-top: 10px;
+		.strategies-holder {
+			z-index: 999;
+			position: relative;
+			h3 {
+				margin-bottom: 0;
 			}
-
+		}
+		.green-text{
+			@include display(flex);
+		}
+		.third {
+			width: calc(50% - 95px);
+			padding-top: 80px;
+			position: relative;
+			p {
+				color: #37824C;;
+				font-size: 15px;
+				line-height: 1.6em;
+				font-weight: 600;
+				position: relative;
+			}
+			&.left {
+				padding-left: 65px;
+				&:after {
+					content: '';
+					display: block;
+					background: url(../images/svgs/arrow.svg) center bottom no-repeat;
+					background-size: 55px auto;
+					width: 60px;
+					height: 140px;
+					position: absolute;
+					top: -43px;
+    				right: -2px;
+					z-index: -1;
+					@include transform(rotate(50deg));
+				}
+			}
 			&.right {
-				padding: 0 0 0	rem-calc(80);
-				.green-bubble {
-					&:after {
-						top: -45px;
-						right: auto;
-					    left: 10px;
-					    margin: 0;
-						transform: rotate(125deg);
-						height: 70px
-					}
+				padding-right: 45px;
+				&:after {
+					content: '';
+					display: block;
+					background: url(../images/svgs/arrow.svg) center bottom no-repeat;
+					background-size: 55px auto;
+					width: 60px;
+					height: 140px;
+					position: absolute;
+					top: -41px;
+				    left: -4px;
+					z-index: -1;
+					@include transform(rotate(-50deg));
+				}
+			}
+			&.middle {
+				width: 190px;
+				@include flex-shrink(0);
+				padding:0;
+				&:before {
+					content: '';
+					display: block;
+					background: url(../images/svgs/arrow.svg) center bottom no-repeat;
+					background-size: 55px auto;
+					width: 100%;
+					height: 140px;
+					margin: 0 auto 10px;
 				}
 			}
 		}
@@ -574,6 +612,19 @@ a.standalone-link {
 	background: url(../images/geo.jpg) top center repeat;
 	background-size: 160px auto;
 	.centered {
+		@media all and (min-width: 1024px) {
+			@include display(flex);
+			> div {
+				padding: 0 15px 0 0;
+				width: 50%;
+			}
+			.latest-tweets {
+				padding: 0 0 0 15px;
+			}
+			.iframe-holder {
+				padding-top: 5px;
+			}
+		}
 		h3 {
 			color: $dark-gray;
 			font-size: 26px;
@@ -602,7 +653,12 @@ a.standalone-link {
 					font-size: 30px;
 					line-height: 40px;
 					color: #a9d5f6;
-
+				}
+				&.video-icon {
+					i {
+						font-size: 24px;
+						color: $dark-blue;
+					}
 				}
 			}
 		}
@@ -614,18 +670,17 @@ a.standalone-link {
 			color: $gray;
 			font-size: 11px;
 			line-height: 1.3em;
-			/*display: flex;
-			display: -webkit-flex;
-  			flex-wrap: wrap;*/
+			@include display(flex);
+			@include flex-flow(row wrap);
 
 			.ktweet {
 				padding: rem-calc(15 0 12 0);
 				background: #fff;
-				padding: rem-calc(20);
+				padding: rem-calc(12 15 5);
 				position: relative;
 				box-shadow: 0px 2px 12px 1px rgba(0,0,0,0.2);
-				width: calc(23% - 3px);
-				margin: 1%;
+				width: calc(50% - 10px);
+				margin: 5px;
 				display: inline-block;
 				vertical-align: top;
 
@@ -1262,6 +1317,9 @@ a.standalone-link {
 			padding: rem-calc(0 80 0 0);
 			float: left;
 			width:66.67%;
+			.iframe-holder {
+				margin: 20px 0;
+			}
 			p {
 				font-size: 14px;
 				line-height: 1.6;
@@ -1718,7 +1776,7 @@ a.standalone-link {
 
 }
 }
-.page-template-performance-tasks {
+.page-template-performance-tasks, .page-template-video-library {
 	#pt-hero {
 		.centered {
 			padding: rem-calc(65px 0 0);
@@ -1730,7 +1788,7 @@ a.standalone-link {
 	}
 	#pt-subhero {
 		.centered	{
-			padding: rem-calc(50 0);
+			padding: rem-calc(35 0);
 			max-width: rem-calc(850);
 			margin: auto;
 			p {
@@ -1742,9 +1800,12 @@ a.standalone-link {
 				margin: 0;
 				line-height: 1.8em;
 			}
+			.iframe-holder {
+				margin-top: 30px;
+			}
 		}
 	}
-	#pt-list {
+	#pt-list {		
 		padding: rem-calc(0 0 60);
 		.left,.right {
 			width: 50%;
@@ -2655,6 +2716,9 @@ a.standalone-link {
 						vertical-align: middle;
 						width: calc(75% - 150px);
 						margin: 0;
+						a {
+							color: inherit;
+						}
 					}
 					.partner-logo{
 						width: 150px;
@@ -2703,5 +2767,59 @@ a.standalone-link {
 				}
 			}
 		}
+	}
+}
+.video-list {
+	@include display(flex);
+	@include flex-flow(row wrap);
+	margin: 30px -20px;
+	.video-holder {
+		width: 50%;
+		padding: 20px 40px 40px 20px;
+		@media all and (max-width: 1024px) {
+			width: 100%;
+		}
+		h3 {
+			color: #777;
+			text-transform: uppercase;
+		    font-weight: 400;
+		    font-size: 20px;
+		    line-height: 1.2em;
+		    margin-bottom: 20px;
+		    position: relative;
+		    padding-left: 45px;
+		}
+	  	@for $i from 1 through 10 {
+	   		&:nth-child(#{$i}) {
+	   			span {
+					display: block;
+					width: 36px;
+					height: 36px;
+					color: $white;
+					background: $orange;
+					border-radius: 50%;
+					margin: rem-calc( 0 10 0 0);
+					text-align: center;
+					line-height: 30px;
+					position: absolute;
+					left: 0px;
+					top: -5px;
+	   			}
+	      		h3 span:before {
+	        		content: '#{$i}';
+	      		}
+	      		h3 span:after {
+					content:'';
+					width: 30%;
+					height: 3px;
+					background: #fff;
+					display: block;
+					position: relative;
+					top:  -4px;
+					margin: auto;
+				}
+
+	    	}
+	  	}
 	}
 }

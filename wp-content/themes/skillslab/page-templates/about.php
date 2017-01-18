@@ -21,52 +21,45 @@ get_header(); ?>
 	<div class="content">
 		<div class="centered">
 			<h2>Process Overview</h2>
-			<div class="infographic revealme">
-				<div class="top clear">
-					<div class="third left">
-						<h3>PROBLEM:</h3>
-						<!--<img width="190" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info1.svg">-->
-						<?php get_template_part('template-parts/inline', 'info1.svg'); ?>
-						<p>There is a disconnect between what students are taught and what the world demands.</p>
-					</div>
-					<div class="third middle">
-						<div class="green-bubble">
-							<p>Convening teachers and their partners in collaborative task design and professional learning sessions</p>
-						</div>
-						<div class="drivers">
-							<h3>DRIVERS</h3>
-						</div>						
-					</div>
-					<div class="third right">
-						<h3>AIM:</h3>
-						<!--<img width="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info2.svg">-->
- 						<?php get_template_part('template-parts/inline', 'info2.svg'); ?>
-						<p>To engage educators, employers and other youth service providers in identifying, designing, implementing and sharing experiences that help students to build skills that support their postsecondary success.</p>
-						
-					</div>
+			<div class="infographic-holder">
+				<div class="infographic revealme">
 					
+					<div class="top clear">
+						<div class="half left">
+							<h3 class="problem">PROBLEM</h3>
+							<!--<img width="190" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info1.svg">-->
+							<?php /* get_template_part('template-parts/inline', 'info1.svg'); */?>
+							<?php get_template_part('template-parts/inline', 'info1-new.svg'); ?>
+							<p>There is a disconnect between what students are learning and what the world demands.</p>
+						</div>
+						<div class="half right">
+							<h3 class="aim">AIM</h3>
+							<!--<img width="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info2.svg">-->
+	 						<?php get_template_part('template-parts/inline', 'info2.svg'); ?>
+							<p>To build the capacity of educators, school leadership, employer and youth-serving partners to provide students meaningful &amp; effective 21st century skill building experiences that prepare them for postsecondary success. </p>
+							
+						</div>
+					</div>
+					<div class="bottom clear">
+						<div class="strategies-holder">
+							<h3 class="strategies">STRATEGIES</h3>
+						</div>
+						<div class="green-text">
+							<div class="third left">
+								<p>Delivering skills-based workforce development support for school-based educators and their employer partners</p>
+							</div>
+							<div class="third middle">
+								<p>Providing customized instructional coaching for classroom teachers</p>
+							</div>
+							<div class="third right">
+								<p>Convening school leadership and their youth-serving partners in collaborative professional learning workshops</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="bottom clear">
-					<div class="mobile-only">
-						<div class="green-bubble">
-							<p>Convening teachers and their partners in collaborative task design and professional learning sessions</p>
-						</div>
-						<div class="drivers">
-							<h3>DRIVERS</h3>
-						</div>						
-					</div>
-					<div class="half left">
-						<div class="green-bubble">
-							<p>Providing resources to fund local change ideas and innovation strategies</p>
-						</div>
-					</div>
-					<div class="half right">
-						<div class="green-bubble">
-							<p>Providing local customized training and technical assistance to practitioners</p>
-						</div>
-
-					</div>
-				</div>
+			</div>
+			<div class="infographic-image-holder">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/process-graphic.svg">
 			</div>
 			<div class="support revealme">
 				<h3>Skills Lab Support Strategies</h3>

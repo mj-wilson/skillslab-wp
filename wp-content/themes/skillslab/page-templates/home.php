@@ -9,7 +9,6 @@ get_header(); ?>
 
 <!-- Hero Section -->
 <section id="home-hero" class="hero" role="main">
-	
 	<div class="headline revealme">
 		<div class="content">
 			<div class="titles ">
@@ -19,58 +18,72 @@ get_header(); ?>
 	</div>
 </section>
 
+<!-- Overview video Section -->
+<?php $posts = get_field('overview_video_link'); 
+if ( $posts != '' ) :
+	if( $posts ): ?>
+	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+	        <?php setup_postdata($post); ?>
+			<section id="overview-video" class="section" role="main">
+				
+				<div class="revealme">
+					<div class="content">
+						<div class="iframe-holder ">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				</div>
+			</section>
+	    <?php endforeach; ?>
+	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+	<?php endif; ?>
+<?php endif; ?>
+
+
 <!-- Statement of Problem Section -->
 <section id="problem" class="section" role="main">
 	<div class="content">
 		<div class="centered">
 			<h1>Process Overview</h1>
-			<div class="infographic revealme">
-				<div class="top clear">
-					<div class="third left">
-						<h3>PROBLEM:</h3>
-						<!--<img width="190" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info1.svg">-->
-						<?php get_template_part('template-parts/inline', 'info1.svg'); ?>
-						<p>There is a disconnect between what students are taught and what the world demands.</p>
-					</div>
-					<div class="third middle">
-						<div class="green-bubble">
-							<p>Providing customized instructional coaching for classroom teachers</p>
-						</div>
-						<div class="drivers">
-							<h3>DRIVERS</h3>
-						</div>						
-					</div>
-					<div class="third right">
-						<h3>AIM:</h3>
-						<!--<img width="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info2.svg">-->
- 						<?php get_template_part('template-parts/inline', 'info2.svg'); ?>
-						<p>To build the capacity of educators, school leadership, employer and youth-serving partners to provide students meaningful and effective 21st century skill building experiences that prepare them for postsecondary success. </p>
-						
-					</div>
+			<div class="infographic-holder">
+				<div class="infographic revealme">
 					
+					<div class="top clear">
+						<div class="half left">
+							<h3 class="problem">PROBLEM</h3>
+							<!--<img width="190" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info1.svg">-->
+							<?php /* get_template_part('template-parts/inline', 'info1.svg'); */?>
+							<?php get_template_part('template-parts/inline', 'info1-new.svg'); ?>
+							<p>There is a disconnect between what students are learning and what the world demands.</p>
+						</div>
+						<div class="half right">
+							<h3 class="aim">AIM</h3>
+							<!--<img width="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/info2.svg">-->
+	 						<?php get_template_part('template-parts/inline', 'info2.svg'); ?>
+							<p>To build the capacity of educators, school leadership, employer and youth-serving partners to provide students meaningful &amp; effective 21st century skill building experiences that prepare them for postsecondary success. </p>
+							
+						</div>
+					</div>
+					<div class="bottom clear">
+						<div class="strategies-holder">
+							<h3 class="strategies">STRATEGIES</h3>
+						</div>
+						<div class="green-text">
+							<div class="third left">
+								<p>Delivering skills-based workforce development support for school-based educators and their employer partners</p>
+							</div>
+							<div class="third middle">
+								<p>Providing customized instructional coaching for classroom teachers</p>
+							</div>
+							<div class="third right">
+								<p>Convening school leadership and their youth-serving partners in collaborative professional learning workshops</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="bottom clear">
-					<div class="mobile-only">
-						<div class="green-bubble">
-							<p>Delivering skills based workforce development support for school-based educators and their employer partners</p>
-						</div>
-						<div class="drivers">
-							<h3>DRIVERS</h3>
-						</div>						
-					</div>
-
-					<div class="half left">
-						<div class="green-bubble">
-							<p>Delivering skills based workforce development support for school-based educators and their employer partners</p>
-						</div>
-					</div>
-					<div class="half right">
-						<div class="green-bubble">
-							<p>Convening school leadership and their youth-serving partners in collaborative professional learning workshops</p>
-						</div>
-
-					</div>
-				</div>
+			</div>
+			<div class="infographic-image-holder">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/process-graphic.svg">
 			</div>
 		</div>
 	</div>
@@ -216,6 +229,23 @@ get_header(); ?>
 <section id="social-feed" class="section " role="main">
 	<div class="content">
 		<div class="centered clear">
+
+		 	<?php $posts = get_field('sxswedu_video_link'); 
+			if ( $posts != '' ) :
+				if( $posts ): ?>
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+						<div class="sxsw_vid">
+							<h3><div class="tweet-icon video-icon"><i class="fa fa-film" aria-hidden="true"></i></div>SXSWedu</h3>		
+							<div class="iframe-holder ">
+						        <?php the_content(); ?>
+						    </div>
+						</div>
+				    <?php endforeach; ?>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+			<?php endif; ?>
+
 			<div class="latest-tweets">
 				<h3><div class="tweet-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div><span>Latest Tweets</span> @NYC_Skills_lab</h3>
 				<div class="tweet-holder">

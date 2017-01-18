@@ -19,7 +19,23 @@ get_header(); ?>
 	<div class="content revealme">
 		<div class="centered">
 				<?php the_content(); ?>
+
+			 	<?php $posts = get_field('performance_task_overview_video'); 
+				if ( $posts != '' ) :
+					if( $posts ): ?>
+					    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					        <?php setup_postdata($post); ?>
+							<div class="iframe-holder ">
+						        <?php the_content(); ?>
+						    </div>
+					    <?php endforeach; ?>
+					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
+				<?php endif; ?>
+
 		</div>
+
+		
 	</div>
 </section>
 

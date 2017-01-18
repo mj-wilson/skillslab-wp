@@ -34,7 +34,7 @@ get_header(); ?>
 					?>
 				 	<div class="school-post revealme">
 					 	<div class="top">
-					 		<h3><?php the_title(); ?></h3>
+					 		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					 		<div class="plus">+</div>
 					 		<?php $logo = get_field('partner_logo'); 					 		
 							    if($logo){ ?>
