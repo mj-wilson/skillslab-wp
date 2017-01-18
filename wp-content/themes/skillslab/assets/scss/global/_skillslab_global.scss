@@ -126,6 +126,7 @@ h1 {
 	display: none;
 	@media all and (max-width: 768px) { 
 		display:block;
+		margin: 0 -20px;
 	}
 }
 .infographic {
@@ -672,13 +673,13 @@ a.standalone-link {
 			line-height: 1.3em;
 			@include display(flex);
 			@include flex-flow(row wrap);
-
+			overflow: visible;
 			.ktweet {
 				padding: rem-calc(15 0 12 0);
 				background: #fff;
 				padding: rem-calc(12 15 5);
 				position: relative;
-				box-shadow: 0px 2px 12px 1px rgba(0,0,0,0.2);
+				box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.2);
 				width: calc(50% - 10px);
 				margin: 5px;
 				display: inline-block;
