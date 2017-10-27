@@ -25,18 +25,18 @@ get_header(); ?>
 				<?php the_field('meet_the_skills_fellows_text'); ?>
 			</div>
 			
+			<!-- Get applicable fellows objects from acf field -->
 			<div class="grid-container clear">
 				<div class="column left">
-				<?php 
-				$args = array(
-				    'posts_per_page' => -1,
-				    'post_type' => 'skills_fellows',
-				    'orderby'=> 'title', 
-				    'order' => 'ASC'
-				);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post(); 
-					?>
+
+
+			<?php  $posts = get_field('skills_fellows');
+
+			if( $posts ): ?>
+			    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+			        <?php setup_postdata($post); ?>
+
+
 				 	<div class="bio-post revealme" id="bio-<?php the_ID(); ?>" >
 					 	<div class="bio-pic">
 					 		<?php  if ( has_post_thumbnail() ) {
@@ -53,8 +53,10 @@ get_header(); ?>
 					 		<div class="toggle"></div>
 					 	</div>
 				 		<div class="show-hide additional-content clear">
+
 				 			<h4>My Teaching Philosophy</h4>
 				 			<p class="teaching_philosophy"><?php the_field('teaching_philosophy'); ?></p>
+							
 				 			<div class="building_block_spotlight_quote">
 
 
@@ -94,19 +96,32 @@ get_header(); ?>
 								        break;
 									}?>
 									</div>									
-				 			<?php endforeach; endif; ?>
+				 				<?php endforeach; endif; ?>
 				 				</div>
 
 				 				<p><?php the_field('building_block_spotlight_quote');  ?><span class="quote"></span></p>
 
 				 			</div>
+							<?php if (get_field('working_on')): ?>
+					 			<h4>What I'm Working on</h4>
+					 			<div class="teaching_philosophy"><?php the_field('working_on'); ?></div>
+					 		<?php endif; ?>
+
+
+				 			
 				 			<div class="link">
 				 				<a class="standalone-link"  href="<?php the_permalink(); ?>">view bio page <i class="fa fa-chevron-right"></i></a>
 				 			</div>
 				 			
 				 		</div>
 					</div>
-				<?php endwhile; ?>
+				
+					<?php endforeach; ?>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+
+
+				
 				</div>
 
 				<div class="column right">

@@ -24,14 +24,11 @@ get_header(); ?>
 		<div class="centered">
 			
 			<div class="grid-container clear">
-				<?php 
-				$args = array(
-				    'posts_per_page' => -1,
-				    'post_type' => 'partnership-school'
-				);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post(); 
-					?>
+				<?php  $posts = get_field('ip_schools');
+
+				if( $posts ): ?>
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				    <?php setup_postdata($post); ?>
 				 	<div class="school-post revealme">
 					 	<div class="top">
 					 		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -51,7 +48,10 @@ get_header(); ?>
 			 			</div>
 				 		
 					</div>
-				<?php endwhile; ?>
+					<?php endforeach; ?>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+
 
 			 	
 			</div><!-- end .cat-container -->

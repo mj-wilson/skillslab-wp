@@ -30,13 +30,15 @@ wp_reset_postdata(); ?>
 			<div class="grid-container clear">
 				 	<div class="bio-post single-bio revealme" id="bio-<?php the_ID(); ?>">
 					 	<div class="top">
-						 	<div class="bio-pic">
+						 	<div class="bio-pic" <?php if( get_field('second_lead_profile_pic') ): ?>style="float:left"<?php endif;?>>
 						 		<?php  if ( has_post_thumbnail() ) {
 									the_post_thumbnail();
 								} else { ?>
 									<div class="headshot"></div>
 								<?php } ?>
-
+								<?php if( get_field('second_lead_profile_pic') ): ?>
+									<img src="<?php the_field('second_lead_profile_pic'); ?>" />
+								<?php endif; ?>
 						 	</div>
 						 	<div class="description">
 						 		<h3><?php the_title(); ?></h3>
@@ -48,16 +50,22 @@ wp_reset_postdata(); ?>
 
 						 </div>
 				 		<div class="additional-content clear">
+				 		<?php if ( get_field('21st_century_skills_building_initiative') != '') { ?>
 				 			<h4>21st Century Skills Building Initiative</h4>
-				 			<?php the_field('21st_century_skills_building_initiative'); ?>
+				 			<?php ( the_field('21st_century_skills_building_initiative') != '') ?>
+				 		<?php } elseif (get_field('work_readiness') != '') { ?>
+				 			<h4>21st Century Skills Building Initiative: Work Readiness</h4>
+				 			<?php ( the_field('work_readiness') != '') ?>
+				 		<?php } ?>
 				 			<div class="building_block_spotlight_quote">
 				 				<?php 
 				 				$field = get_field_object('building_block_spotlight');
-								$v = get_field('building_block_spotlight'); ?>
+								$v = get_field('building_block_spotlight'); 
+								$employability_skill = get_field('core_employability_skill'); ?>
 				 			
 				 				<h4>Building Block Spotlight: <span><?php
 									echo $field['choices'][ $v ];
-									?></span></h4>	
+									?> <?php if($employability_skill) { echo '>> ' .$employability_skill; }?></span></h4>	
 				 				<div class="block-holder">
 				 					<div class="block">
 									<?php 

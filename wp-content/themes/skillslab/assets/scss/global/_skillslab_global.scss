@@ -373,8 +373,34 @@ h1 {
 			float:left;
 			padding: 0 rem-calc(25);
 			border-left: 1px solid $light-gray;
+			position: relative;
 			&:first-child {
 				border:none;
+			} 
+			.pilot_badge {
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 11px;
+				text-transform: uppercase;
+				font-weight: bold;
+				padding: 6px 7px;
+				width: 80px;
+				color: #fff;
+				text-align: left;
+				line-height: 1em;
+				&:before {
+					content: '';
+					display: block;
+					width: 0;
+					height: 0;
+					border-top: 85px solid $dark-green;
+					border-right: 85px solid transparent;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+				}
 			}
 			img {
 				max-width: 100%;
@@ -459,6 +485,9 @@ h1 {
 			h4	{
 				color: $orange;
 			}
+			.pilot_badge:before {
+				border-top-color: $orange;
+			}
 		}
 		}
 	}
@@ -476,7 +505,7 @@ h1 {
 		max-width: rem-calc(800);
 		margin: auto;
 		list-style: none;
-		text-align: left;
+		text-align: left; 
 		li {
 			width: 49%;
 			text-align: left;
@@ -499,6 +528,19 @@ h1 {
 				background: $green;
 				text-align: center;
 				border-radius: 50%;
+			}
+			ul li {
+				&:before {
+					content: '';
+					background: #fff;
+					width: rem-calc(6);
+					height: rem-calc(6);
+					top: 8px;
+				}
+				width: auto;
+				padding: 0 0 0 15px;
+				margin: 5px 0 0;
+
 			}
 		}
 	}
@@ -910,6 +952,7 @@ a.standalone-link {
 			line-height: 1em;
 			overflow: hidden;
 			letter-spacing: 0.05em;
+			text-transform: uppercase;
 			span {
 				display: inline-block;
 			  	position: relative;  
@@ -1175,6 +1218,54 @@ a.standalone-link {
 			}
 		}
 
+	}
+	&#tools {
+		background: $blue;
+		color: #fff;	
+		h2 {
+			@include h2Bar($white);
+		}
+		.type-holder {
+			margin-top: 40px;
+			.half {
+				width: 45%;
+				display: inline-block;
+				vertical-align: top;
+				padding: rem-calc(0 30 40);
+				text-align: left;
+				clear: both;
+				.top {
+					display: flex;
+					align-items: center;
+					h4 {
+						margin: 10px 0 0;
+					}
+				}
+				.img {
+					width: 100px;
+					padding-right: 12px;
+					svg {
+						max-width: 100%;
+						opacity: 0.75;
+						path {
+							fill: $dark-blue;
+						}
+					}
+				}
+				.text {
+					float:left;
+					width: 100%;
+					font-size: rem-calc(14);
+					margin-top: 10px;
+					p {
+						margin-bottom: rem-calc(12);
+						em {
+							font-weight: 600;
+						}
+					}
+				}	
+			}
+		}		
 	}
 	&#products {
 		.narrow {
@@ -1969,7 +2060,7 @@ a.standalone-link {
 		}
 	}
 }
-.page-template-partners {
+.page-template-partners, .page-template-team-bios {
 	#partners-hero {
 		background: $orange;
 		.centered {
@@ -2110,7 +2201,7 @@ a.standalone-link {
 		transition-delay: calc(0.2s * #{$i});
 	}
 }
-.page-template-skills-fellows, .page-template-project-leads, .single-skills_fellows, .single-project_lead {
+.page-template-skills-fellows, .page-template-skills-fellowsv2, .page-template-project-leads, .single-skills_fellows, .single-skills_fellowsv2, .single-project_lead {
 	#fellows-hero {
 		background: $green;
 		.centered {
@@ -2267,10 +2358,13 @@ a.standalone-link {
 					}
 
 				}
+				.teaching_philosophy_outer {
+					margin-top: 40px;
+				}
 				.show-hide {
 					display: none;					
 				}
-				.additional-content {
+				.additional-content, .top {
 					padding: 30px 0 0 0;
 
 					h4 {
@@ -2281,14 +2375,8 @@ a.standalone-link {
 						font-weight: bold;
 						margin: rem-calc(0 0 10);
 					}
-					p {
-						font-size: 14px;
-						color: $darker-gray;
+					.teaching_philosophy {
 						position: relative;
-						a {
-							font-weight: bold;
-							border-bottom: 1px solid;
-						}
 						&:before {
 							content: '\201C';
 							font-family: 'Georgia';
@@ -2301,15 +2389,22 @@ a.standalone-link {
 							top: -15px;
 							z-index: -1;
 						}
-						&:after {
-							content: '\201D';
+					}
+
+					p, li {
+						font-size: 14px;
+						color: $darker-gray;
+						position: relative;
+						a {
+							font-weight: bold;
+							border-bottom: 1px solid;
 						}
 					}
 					.building_block_spotlight_quote {
 						background:  $green;
 						color: #fff;
 						padding: rem-calc(30 25);
-						margin: rem-calc(25 0);
+						margin: rem-calc(0 0 25 0);
 						border-radius: 10px;
 						h4 {
 							color: #fff;
@@ -2319,6 +2414,7 @@ a.standalone-link {
 							span {
 								font-family: $body-font-family;
 								font-weight: normal;
+								font-size: 14px;
 							}
 						}
 						.block-holder {
@@ -2363,6 +2459,9 @@ a.standalone-link {
 								padding-right: 1px;
 							}
 							&:after {
+								display: none;
+							}
+							br:last-of-type {
 								display: none;
 							}
 							span {
@@ -2519,7 +2618,7 @@ a.standalone-link {
 				}
 				.additional-content {
 					padding:0;
-					> p {
+					> p, li {
 						color: $gray;
 						&:before, &:after {
 							display:none;
@@ -2530,7 +2629,7 @@ a.standalone-link {
 		}
 	}
  }
- .single-skills_fellows, .single-project_lead {
+.single-skills_fellows, .single-skills_fellowsv2, .single-project_lead {
   	#fellows-list {
 
 		.grid-container {
@@ -2570,8 +2669,8 @@ a.standalone-link {
 		.grid-container {
 			.bio-post {
 				.top {
-					padding: rem-calc(0 40 0 0);
-					.current-role p {
+					padding: rem-calc(0 40 20 0);
+					.current-role p, .current-role li {
 						margin: rem-calc(10 0 0);
 						color: $gray;
 						font-size: 14px;
@@ -2823,4 +2922,76 @@ a.standalone-link {
 	    	}
 	  	}
 	}
+}
+#team-bios {
+	.bios {
+		display: flex;
+		.post {
+			width: 50%;
+			padding: 0px 60px;
+			
+			&:nth-child(even) {
+				border-left: 1px solid #ddd;
+			}
+			.top {
+				display: flex;
+				align-items: center;
+				.bio-pic {
+					width: 220px;
+					padding: rem-calc(0 20 0 0);
+					position: relative;
+					img {
+						width: 100%;
+						height: auto;
+						border-radius: 50%;
+					}
+					.headshot { 
+						display: block;
+						width: 200px;
+						height: 200px;
+						border-radius: 50%;
+						background: #ddd;
+						overflow: hidden;
+						text-align: center;
+						&:after {
+							color: #fff;
+							font-size: 180px;
+							content: "\f007";
+							font-family: 'FontAwesome';
+							position: relative;
+							top: -10px;
+						}
+
+					}
+				}
+				h3 {
+					font-family: $body-font-family;
+					font-weight: bold;
+					text-transform: uppercase;
+					font-size: rem-calc(20);
+					color: $darker-gray;
+					display: inline-block;
+					&:after {
+						content:'';
+						width: 70%;
+						height: 5px;
+						background: $darker-gray;
+						display: block;
+						margin: 10px 0 10px;
+					}
+				}
+			}
+			.description {
+				margin: 30px 0;
+				text-align: left;
+				p {
+					font-size: 14px;
+
+				}
+
+			}
+		}
+
+	}
+
 }

@@ -104,7 +104,7 @@ get_header(); ?>
 
 		</div>
 	 	<div class="navigation">
-			<a class="standalone-link" href="/integrated-partnership-schools"><i class="fa fa-chevron-left"></i> view all Integrated Partnership Schools</a>
+			<a class="standalone-link" href="/2017-2018-integrated-partnership-schools/"><i class="fa fa-chevron-left"></i> view all Integrated Partnership Schools</a>
 		</div>
 	</div>
 </section>

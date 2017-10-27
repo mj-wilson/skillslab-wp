@@ -26,22 +26,23 @@ get_header(); ?>
 			</div>
 			<div class="grid-container clear">
 				<div class="column left">
-				<?php 
-				$args = array(
-				    'posts_per_page' => -1,
-				    'post_type' => 'project_lead',
-				    'orderby'=> 'title', 
-				    'order' => 'ASC'
-				);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post(); 
-					?>
+				
+				<?php  $posts = get_field('project_leads');
+
+				if( $posts ): ?>
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				    <?php setup_postdata($post); ?>
+
 				 	<div class="bio-post revealme">
 					 	<div class="bio-pic">
 					 		<?php  if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
-							} ?>
-
+							} else { ?>
+								<div class="headshot"></div>
+							<?php } ?>
+							<?php if( get_field('second_lead_profile_pic') ): ?>
+								<img src="<?php the_field('second_lead_profile_pic'); ?>" />
+							<?php endif; ?>
 					 	</div>
 					 	<div class="description">
 					 		<h3><?php the_title(); ?></h3>
@@ -50,16 +51,22 @@ get_header(); ?>
 					 		<div class="toggle"></div>
 					 	</div>
 				 		<div class="show-hide additional-content clear">
+				 		<?php if ( get_field('21st_century_skills_building_initiative') != '') { ?>
 				 			<h4>21st Century Skills Building Initiative</h4>
-				 			<?php the_field('21st_century_skills_building_initiative'); ?>
+				 			<?php ( the_field('21st_century_skills_building_initiative') != '') ?>
+				 		<?php } elseif (get_field('work_readiness') != '') { ?>
+				 			<h4>21st Century Skills Building Initiative: Work Readiness</h4>
+				 			<?php ( the_field('work_readiness') != '') ?>
+				 		<?php } ?>
 				 			<div class="building_block_spotlight_quote">
 				 				<?php 
 				 				$field = get_field_object('building_block_spotlight');
-								$v = get_field('building_block_spotlight'); ?>
+								$v = get_field('building_block_spotlight'); 
+								$employability_skill = get_field('core_employability_skill'); ?>
 				 			
 				 				<h4>Building Block Spotlight: <span><?php
 									echo $field['choices'][ $v ];
-									?></span></h4>	
+									?> <?php if($employability_skill) { echo '>> ' .$employability_skill; }?></span></h4>	
 				 				<div class="block-holder">
 				 					<div class="block">
 									<?php 
@@ -93,7 +100,12 @@ get_header(); ?>
 				 		
 				 		</div>
 					</div>
-				<?php endwhile; ?>
+
+					<?php endforeach; ?>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+
+
 				</div>
 
 				<div class="column right">

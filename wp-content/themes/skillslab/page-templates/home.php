@@ -98,40 +98,41 @@ if ( $posts != '' ) :
 				<div class="quarter schools revealme">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/school_sm.svg">
 					<div class="stats">
-						<div class="number">11</div>
+						<div class="number">15</div>
 						<div class="text">
 							<span class="header">SCHOOLS</span>
-							CTE, Transfer, Portfolio Based and one M.S. School
+							CTE, YABC, Transfer, Portfolio based, and traditional HS
 						</div>
 					</div>
 				</div>
 				<div class="quarter partners revealme delay1">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/block-collaboration.svg">
 					<div class="stats">
-						<div class="number">28</div>
+						<div class="number">5</div>
 						<div class="text">
 							<span class="header">PARTNERS</span>
-							Mix of Nonprofit, Corporate &amp; Education Based Organizations
+							Community Based Organizations
 						</div>
 					</div>
 				</div>
 				<div class="quarter educators revealme delay2">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/book-apple.svg">
 					<div class="stats">
-						<div class="number">40<span>+</span></div>
+						<div class="number">46<span>+</span></div>
 						<div class="text">
 							<span class="header">EDUCATORS</span>
-							Principals/Vice-Principals, Teachers, Community Assistants &amp; Paraprofessionals
+							Principals, Assistant Principals, Teachers, Counselors, Community Associates
+
 						</div>
 					</div>
 				</div>
 				<div class="quarter students revealme delay3">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/backpack.svg">
 					<div class="stats">
-						<div class="number">1000<span>+</span></div>
+						<div class="number">2000<span>+</span></div>
 						<div class="text">
 							<span class="header">STUDENTS</span>
-							served in the NYC area in 6-12 grade
+							served in the NYC area in 9 - 12 grade
 						</div>
 					</div>
 				</div>
@@ -155,10 +156,12 @@ if ( $posts != '' ) :
 					<?php the_field('support_strategies'); ?>
 				</div>
 				<div class="quarter dark-green revealme delay2">
+					<div class="pilot_badge"><span>Initial<br> Pilot<br> Year</span></div>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/thumbtack.svg">
 					<?php the_field('performance_tasks'); ?>
 				</div>
 				<div class="quarter orange revealme delay3">
+					<div class="pilot_badge"><span>Initial<br> Pilot<br> Year</span></div>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/svgs/light-bulb-line.svg">
 					<?php the_field('innovation_projects'); ?>
 				</div>

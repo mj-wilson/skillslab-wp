@@ -46,7 +46,7 @@ wp_reset_postdata(); ?>
 						 </div>
 				 		<div class="additional-content clear">
 				 			<h4>My Teaching Philosophy</h4>
-				 			<p class="teaching_philosophy"><?php the_field('teaching_philosophy'); ?></p>
+				 			<div class="teaching_philosophy"><?php the_field('teaching_philosophy'); ?></div>
 				 			<div class="building_block_spotlight_quote">
 
 
@@ -95,7 +95,7 @@ wp_reset_postdata(); ?>
 				</div>
 
 			 	<div class="navigation">
-					<a class="standalone-link" href="/skills-fellows"><i class="fa fa-chevron-left"></i> view all Skills Fellows </a>
+					<a class="standalone-link" href="/2016-2017-skills-fellowship/"><i class="fa fa-chevron-left"></i> view all Skills Fellows </a>
 				</div>
 
 			</div>

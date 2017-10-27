@@ -45,13 +45,29 @@ add_action( 'init', function() {
     );
     register_post_type( 'skills_fellows', $args_skills_fellows );
 
+    $args_skills_fellowsv2 = array(
+        'public' => true,
+        'menu_icon' => 'dashicons-id-alt',
+        'label'  => '2017-18 Skills Fellows',
+        'supports'  => array( 'title', 'editor', 'thumbnail' )
+    );
+    register_post_type( 'skills_fellowsv2', $args_skills_fellowsv2 );
+
     $args_partnership_schools = array(
       	'public' => true,
-		'menu_icon' => 'dashicons-building',
+		    'menu_icon' => 'dashicons-building',
       	'label'  => 'Partnership Schools',
-		'supports'  => array( 'title', 'editor', 'thumbnail' )
+		    'supports'  => array( 'title', 'editor', 'thumbnail' )
     );
     register_post_type( 'partnership-school', $args_partnership_schools );
+
+    $args_team_bio = array(
+        'public' => true,
+        'menu_icon' => 'dashicons-id-alt',
+        'label'  => 'Team Bios',
+        'supports'  => array( 'title', 'editor', 'thumbnail' )
+    );
+    register_post_type( 'team_bio', $args_team_bio );
 
 	register_taxonomy(
 		'partner_type',

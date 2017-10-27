@@ -92,52 +92,50 @@ get_header(); ?>
 					<?php the_field('skills_framework'); ?>
 			
 					<h4 class="lined"><span>SKILLS BUILDING BLOCKS</span></h4>
-				<div class="blocks clear">
-					<div class="block-holder revealme">
-						<div class="block mindset"></div>
-						<div class="block-label">PERSONAL MINDSET</div>
-					</div>
-					<div class="block-holder revealme">
-						<div class="block planning"></div>
-						<div class="block-label">Planning For Success</div>
-					</div>
-					<div class="block-holder revealme">
-						<div class="block social"></div>
-						<div class="block-label">social awareness</div>
-					</div>
-					<div class="block-holder revealme">
-						<div class="block verbal"></div>
-						<div class="block-label">verbal communication</div>
-					</div>
-					<div class="block-holder revealme">
-						<div class="block collaboration"></div>
-						<div class="block-label">Collaboration</div>
-					</div>
-					<div class="block-holder revealme">
-						<div class="block problem"></div>
-						<div class="block-label">problem solving</div>
+					<div class="blocks clear">
+						<div class="block-holder revealme">
+							<a href="http://mhalabs.org/skill-building-blocks/personal-mindset/" target="_blank">
+								<div class="block mindset"></div>
+								<div class="block-label">PERSONAL MINDSET</div>
+							</a>	
+						</div>
+						<div class="block-holder revealme">
+							<a href="http://mhalabs.org/skill-building-blocks/planning-for-success/" target="_blank">
+								<div class="block planning"></div>
+								<div class="block-label">Planning For Success</div>
+							</a>
+						</div>
+						<div class="block-holder revealme">
+							<a href="http://mhalabs.org/skill-building-blocks/social-awareness/" target="_blank">
+								<div class="block social"></div>
+								<div class="block-label">social awareness</div>
+							</a>
+						</div>
+						<div class="block-holder revealme">
+							<a href="http://mhalabs.org/skill-building-blocks/verbal-communication/" target="_blank">
+								<div class="block verbal"></div>
+								<div class="block-label">verbal communication</div>
+							</a>
+						</div>
+						<div class="block-holder revealme">
+							<a href="http://mhalabs.org/skill-building-blocks/collaboration/" target="_blank">
+								<div class="block collaboration"></div>
+								<div class="block-label">Collaboration</div>
+							</a>
+						</div>
+						<div class="block-holder revealme">
+							<a href="http://mhalabs.org/skill-building-blocks/problem-solving/" target="_blank">
+								<div class="block problem"></div>
+								<div class="block-label">problem solving</div>
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			
+				
+				<h4 class="lined"><span>Core Employability Framework</span></h4>
+					<?php the_field('core_employability_framework'); ?>
 
-			</div>
-		</div>
-	</div>
-</section>
 
-<!-- Performance Tasks Section -->
-<section id="performance-tasks" class="section" role="main">
-	<div class="content">
-		<div class="centered">
-			<h2>Performance Tasks</h2>
-			<div class="narrow revealme">
-				<?php the_field('performance_tasks_overview'); ?>
-			</div>
-			<div class="types revealme">
-				<p class="icon-above">Types of performance tasks:</p>
-				<?php the_field('performance_tasks_types'); ?>
-				<a class="standalone-link" href="/performance-tasks">view all performance tasks <i class="fa fa-chevron-right"></i></a>
 			</div>
 		</div>
 	</div>
@@ -243,6 +241,66 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
+
+
+<!-- Tools Section -->
+<section id="tools" class="section" role="main">
+	<div class="content">
+		<div class="centered">
+			<h2>Tools</h2>
+			<!--<div class="top revealme">
+				<?php the_field('innovations_overview'); ?>
+			</div>-->
+			<div class="types revealme">
+				<div class="type-holder">
+					<div class="half clear">
+						<div class="top">
+							<div class="img">
+								<?php get_template_part('template-parts/inline', 'toolkit.svg'); ?>
+							</div>
+							<h4>Workforce Alliance Internship Tools</h4>
+						</div>	
+						<div class="text">
+							<?php the_field('workforce_alliance_internship_tools'); ?>
+						</div>
+					</div>
+					<div class="half clear">
+						<div class="top">
+							<div class="img">
+								<?php get_template_part('template-parts/inline', 'toolkit.svg'); ?>
+
+							</div>
+							<h4>Skills Fellowship Instruction Tools</h4>
+						</div>	
+						<div class="text">
+							<?php the_field('skills_fellowship_instruction_tools'); ?>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Performance Tasks Section -->
+<section id="performance-tasks" class="section" role="main">
+	<div class="content">
+		<div class="centered">
+			<h2>Performance Tasks</h2>
+			<div class="narrow revealme">
+				<?php the_field('performance_tasks_overview'); ?>
+			</div>
+			<div class="types revealme">
+				<p class="icon-above">Types of performance tasks:</p>
+				<?php the_field('performance_tasks_types'); ?>
+				<a class="standalone-link" href="/performance-tasks">view all performance tasks <i class="fa fa-chevron-right"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <!-- Products Section -->
 <section id="products" class="section gray" role="main">

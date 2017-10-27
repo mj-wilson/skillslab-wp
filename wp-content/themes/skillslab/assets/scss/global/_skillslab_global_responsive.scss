@@ -875,6 +875,20 @@
 			}
 		}
 	}
+	&#tools {
+		.type-holder {
+			.half {
+				width: 100%;
+				display: block;
+				padding: 0 10px;
+				.top h4 {
+					font-size: 18px;
+					line-height: 1em;
+					margin: 0;
+				}
+			}
+		}
+	}
 
 	}
 }
@@ -942,8 +956,12 @@
 				display: block;
 				margin: auto;
 				padding:0;
+				float: none !important;
 				img {
 					margin: 0;
+					&:nth-child(2) {
+						margin-top: 20px;
+					}
 				}
 			}
 			.description {
