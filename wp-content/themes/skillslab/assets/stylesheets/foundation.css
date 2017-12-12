@@ -7221,6 +7221,12 @@ a.standalone-link {
         padding: 0 0 0 15px; }
       #social-feed .centered .iframe-holder {
         padding-top: 5px; } }
+  #social-feed .centered .video-intro {
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    padding: 20px 15px 15px;
+    line-height: 1.5;
+    margin-top: -19px; }
   #social-feed .centered h3 {
     color: #555555;
     font-size: 26px;
@@ -7496,7 +7502,79 @@ a.standalone-link {
     .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder {
       width: 33.33%;
       text-align: left;
-      padding: 0 0 1.25rem; }
+      padding: 0 0 1.25rem;
+      position: relative; }
+      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder.active .bullets {
+        display: block; }
+      @media (min-width: 769px) {
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder:nth-child(3n) .bullets {
+          left: auto;
+          right: 0; }
+          .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder:nth-child(3n) .bullets:after {
+            left: auto;
+            right: 120px; } }
+      @media (min-width: 481px) and (max-width: 768px) {
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder:nth-child(even) .bullets {
+          left: auto;
+          right: 0; }
+          .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder:nth-child(even) .bullets:after {
+            left: auto;
+            right: 150px; } }
+      .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        width: 500px;
+        left: 0;
+        border: 1px solid #bbb;
+        margin-bottom: -1px; }
+        @media (max-width: 768px) {
+          .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets {
+            width: 200%; } }
+        @media (max-width: 480px) {
+          .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets {
+            width: 100%; } }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -10px;
+          width: 20px;
+          height: 20px;
+          left: 120px;
+          border: 1px solid #bbb;
+          background: #fff;
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets .bullets-inner {
+          padding: 20px;
+          background: #fff;
+          z-index: 9;
+          position: relative; }
+          .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets .bullets-inner .close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer; }
+            .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets .bullets-inner .close:before, .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets .bullets-inner .close:after {
+              content: '';
+              display: block;
+              width: 16px;
+              height: 2px;
+              background: #555;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -ms-transform: translate(-50%, -50%) rotate(-45deg);
+                  transform: translate(-50%, -50%) rotate(-45deg); }
+            .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets .bullets-inner .close:after {
+              -ms-transform: translate(-50%, -50%) rotate(45deg);
+                  transform: translate(-50%, -50%) rotate(45deg); }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .bullets ul {
+          font-size: 13px;
+          margin-bottom: 0; }
       .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block {
         display: inline-block;
         width: 88px;
@@ -7505,7 +7583,8 @@ a.standalone-link {
         background-size: 250px auto;
         padding: 15px 15px 0 0;
         text-align: center;
-        overflow: hidden; }
+        overflow: hidden;
+        cursor: pointer; }
         .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block:after {
           content: '';
           display: inline-block;
@@ -7514,17 +7593,17 @@ a.standalone-link {
           background: url("../images/sprites.png") 0 -175px no-repeat;
           background-size: 250px auto;
           margin-top: 12px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.planning:after {
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.planning-for-success:after {
           background-position: 0 -250px;
           width: 48px;
           margin-top: 8px;
           height: 60px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.social:after {
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.social-awareness:after {
           background-position: 0 -325px;
           width: 55px;
           margin-top: 13px;
           height: 50px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.verbal:after {
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.verbal-communication:after {
           background-position: 0 -375px;
           width: 58px;
           margin-top: 14px;
@@ -7534,7 +7613,7 @@ a.standalone-link {
           width: 50px;
           height: 50px;
           margin-top: 13px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.problem:after {
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.problem-solving:after {
           background-position: 0 -500px;
           width: 53px;
           height: 50px;
@@ -7549,7 +7628,8 @@ a.standalone-link {
         padding: 0.9375rem 0 0 0.3125rem;
         font-family: "Oswald", sans-serif;
         font-weight: 700;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        cursor: pointer; }
   .page-template-about .section:not(#about-hero)#performance-tasks {
     background-image: linear-gradient(185deg, #7fb34b, #72a53f);
     color: #fff; }
@@ -9280,61 +9360,71 @@ a.standalone-link {
       top: -4px;
       margin: auto; }
 
-#team-bios .bios {
+#team-bios .bios .post {
+  padding: 40px 60px 20px;
+  border-top: 1px solid #ddd;
   display: -ms-flexbox;
-  display: flex; }
-  #team-bios .bios .post {
-    width: 50%;
-    padding: 0px 60px; }
-    #team-bios .bios .post:nth-child(even) {
-      border-left: 1px solid #ddd; }
-    #team-bios .bios .post .top {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center; }
-      #team-bios .bios .post .top .bio-pic {
-        width: 220px;
-        padding: 0 1.25rem 0 0;
-        position: relative; }
-        #team-bios .bios .post .top .bio-pic img {
-          width: 100%;
-          height: auto;
-          border-radius: 50%; }
-        #team-bios .bios .post .top .bio-pic .headshot {
-          display: block;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          background: #ddd;
-          overflow: hidden;
-          text-align: center; }
-          #team-bios .bios .post .top .bio-pic .headshot:after {
-            color: #fff;
-            font-size: 180px;
-            content: "\f007";
-            font-family: 'FontAwesome';
-            position: relative;
-            top: -10px; }
-      #team-bios .bios .post .top h3 {
-        font-family: "Open Sans", sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        color: #222222;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start; }
+  #team-bios .bios .post:first-child {
+    border: none;
+    padding-top: 0px; }
+  @media all and (max-width: 480px) {
+    #team-bios .bios .post {
+      display: block;
+      padding: 30px 20px 20px; } }
+  #team-bios .bios .post .top {
+    padding: 0 1.875rem 0 0; }
+    @media all and (max-width: 480px) {
+      #team-bios .bios .post .top {
+        padding: 0; } }
+    #team-bios .bios .post .top .bio-pic {
+      width: 220px;
+      padding: 0 0 1.25rem;
+      position: relative; }
+      @media all and (max-width: 480px) {
+        #team-bios .bios .post .top .bio-pic {
+          margin: auto; } }
+      #team-bios .bios .post .top .bio-pic img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
         display: inline-block; }
-        #team-bios .bios .post .top h3:after {
-          content: '';
-          width: 70%;
-          height: 5px;
-          background: #222222;
-          display: block;
-          margin: 10px 0 10px; }
-    #team-bios .bios .post .description {
-      margin: 30px 0;
-      text-align: left; }
-      #team-bios .bios .post .description p {
-        font-size: 14px; }
+      #team-bios .bios .post .top .bio-pic .headshot {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #ddd;
+        overflow: hidden;
+        text-align: center; }
+        #team-bios .bios .post .top .bio-pic .headshot:after {
+          color: #fff;
+          font-size: 180px;
+          content: "\f007";
+          font-family: 'FontAwesome';
+          position: relative;
+          top: -10px; }
+    #team-bios .bios .post .top h3 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      color: #222222;
+      display: inline-block; }
+      #team-bios .bios .post .top h3:after {
+        content: '';
+        width: 70%;
+        height: 5px;
+        background: #222222;
+        display: block;
+        margin: 10px auto 10px; }
+  #team-bios .bios .post .description {
+    margin: 15px 0;
+    text-align: left; }
+    #team-bios .bios .post .description p {
+      font-size: 14px; }
 
 @media all and (max-width: 1024px) {
   #home-hero {

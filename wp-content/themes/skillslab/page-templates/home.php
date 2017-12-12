@@ -132,7 +132,8 @@ if ( $posts != '' ) :
 						<div class="number">2000<span>+</span></div>
 						<div class="text">
 							<span class="header">STUDENTS</span>
-							served in the NYC area in 9 - 12 grade
+							served in the NYC area in the 9th-12th grade
+
 						</div>
 					</div>
 				</div>
@@ -232,22 +233,25 @@ if ( $posts != '' ) :
 <section id="social-feed" class="section " role="main">
 	<div class="content">
 		<div class="centered clear">
+			<div class="sxsw_vid">
+				<h3><div class="tweet-icon video-icon"><i class="fa fa-film" aria-hidden="true"></i></div>SXSWedu</h3>
 
-		 	<?php $posts = get_field('sxswedu_video_link'); 
-			if ( $posts != '' ) :
-				if( $posts ): ?>
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-				        <?php setup_postdata($post); ?>
-						<div class="sxsw_vid">
-							<h3><div class="tweet-icon video-icon"><i class="fa fa-film" aria-hidden="true"></i></div>SXSWedu</h3>		
-							<div class="iframe-holder ">
-						        <?php the_content(); ?>
-						    </div>
-						</div>
-				    <?php endforeach; ?>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		 		<div class="video-intro"><?php the_field('sxswedu_video_title_description'); ?></div>
+
+			 	<?php $posts = get_field('sxswedu_video_link'); 
+				if ( $posts != '' ) :
+					if( $posts ): ?>
+					    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					        <?php setup_postdata($post); ?>
+								<div class="iframe-holder ">
+							        <?php the_content(); ?>
+							    </div>
+					    <?php endforeach; ?>
+					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
 				<?php endif; ?>
-			<?php endif; ?>
+			
+			</div>
 
 			<div class="latest-tweets">
 				<h3><div class="tweet-icon"><i class="fa fa-twitter" aria-hidden="true"></i></div><span>Latest Tweets</span> @NYC_Skills_lab</h3>

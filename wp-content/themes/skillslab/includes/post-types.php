@@ -91,11 +91,19 @@ add_action( 'init', function() {
 
     $args_videos = array(
       	'public' => true,
-		'menu_icon' => 'dashicons-video-alt3',
+		    'menu_icon' => 'dashicons-video-alt3',
       	'label'  => 'Videos',
-		'supports'  => array( 'title', 'editor', 'thumbnail' )
+		    'supports'  => array( 'title', 'editor', 'thumbnail' )
     );
     register_post_type( 'video', $args_videos );
+
+    $args_buildingblocks = array(
+        'public' => true,
+        'menu_icon' => 'dashicons-layout',
+        'label'  => 'Building Blocks',
+        'supports'  => array( 'title', 'editor', 'thumbnail' )
+    );
+    register_post_type( 'building_blocks', $args_buildingblocks );
 
 } );
 

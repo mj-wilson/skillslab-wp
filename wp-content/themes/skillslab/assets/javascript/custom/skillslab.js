@@ -77,5 +77,13 @@ $( document ).ready(function() {
 		$(this).toggleClass('open');
 		$(this).parent().next('.show-hide').slideToggle();
 	});
+
+	$('.block-holder .block, .block-holder .block-label').click(function(){
+		$('.bullets').hide();
+		$(this).nextAll('.bullets').fadeIn();
+	});
+	$('.block-holder .close').click(function(){
+		$(this).closest('.bullets').hide();
+	});
 });
 

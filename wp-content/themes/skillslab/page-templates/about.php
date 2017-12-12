@@ -93,42 +93,29 @@ get_header(); ?>
 			
 					<h4 class="lined"><span>SKILLS BUILDING BLOCKS</span></h4>
 					<div class="blocks clear">
+					<?php 
+					$args = array(
+					    'posts_per_page' => -1,
+					    'post_type' => 'building_blocks'
+					);
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						
 						<div class="block-holder revealme">
-							<a href="http://mhalabs.org/skill-building-blocks/personal-mindset/" target="_blank">
-								<div class="block mindset"></div>
-								<div class="block-label">PERSONAL MINDSET</div>
-							</a>	
+							<div class="block <?php echo $post->post_name; ?>"></div>
+							<div class="block-label"><?php the_title(); ?></div>
+							<div class="bullets">
+								<div class="bullets-inner">
+									<?php the_content(); ?>
+									<div class="close"></div>
+								</div>
+							</div>
 						</div>
-						<div class="block-holder revealme">
-							<a href="http://mhalabs.org/skill-building-blocks/planning-for-success/" target="_blank">
-								<div class="block planning"></div>
-								<div class="block-label">Planning For Success</div>
-							</a>
-						</div>
-						<div class="block-holder revealme">
-							<a href="http://mhalabs.org/skill-building-blocks/social-awareness/" target="_blank">
-								<div class="block social"></div>
-								<div class="block-label">social awareness</div>
-							</a>
-						</div>
-						<div class="block-holder revealme">
-							<a href="http://mhalabs.org/skill-building-blocks/verbal-communication/" target="_blank">
-								<div class="block verbal"></div>
-								<div class="block-label">verbal communication</div>
-							</a>
-						</div>
-						<div class="block-holder revealme">
-							<a href="http://mhalabs.org/skill-building-blocks/collaboration/" target="_blank">
-								<div class="block collaboration"></div>
-								<div class="block-label">Collaboration</div>
-							</a>
-						</div>
-						<div class="block-holder revealme">
-							<a href="http://mhalabs.org/skill-building-blocks/problem-solving/" target="_blank">
-								<div class="block problem"></div>
-								<div class="block-label">problem solving</div>
-							</a>
-						</div>
+
+					<?php endwhile; 
+					 wp_reset_postdata(); ?>
+
+						
 					</div>
 				</div>
 				
@@ -302,17 +289,6 @@ get_header(); ?>
 </section>
 
 
-<!-- Products Section -->
-<section id="products" class="section gray" role="main">
-	<div class="content">
-		<div class="centered">
-			<h2>products + outcomes</h2>
-			<div class="narrow revealme">
-				<?php the_field('products_and_outcomes'); ?>
-			</div>
-		</div>
-	</div>
-</section>
 
 <!-- More Information Section -->
 <section id="more-info" class="section" role="main">

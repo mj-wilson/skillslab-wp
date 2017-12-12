@@ -668,6 +668,13 @@ a.standalone-link {
 				padding-top: 5px;
 			}
 		}
+		.video-intro {
+		    background: rgba(255,255,255,0.7);
+		    font-size: 12px;
+		    padding: 20px 15px 15px;
+		    line-height: 1.5;
+		    margin-top: -19px;
+		}
 		h3 {
 			color: $dark-gray;
 			font-size: 26px;
@@ -983,6 +990,96 @@ a.standalone-link {
 				width: 33.33%;
 				text-align: left;
 				padding: rem-calc(0 0 20);
+				position: relative;
+				&.active {
+					.bullets {
+						display: block;
+					}
+				}
+				&:nth-child(3n) {
+					@media (min-width: 769px) {
+						.bullets {
+							left: auto;
+							right: 0;
+							&:after {
+								left: auto;
+								right: 120px;
+							}
+						}
+					}
+				}
+				&:nth-child(even) {
+					@media (min-width: 481px) and (max-width: 768px) {
+						.bullets {
+							left: auto;
+							right: 0;
+							&:after {
+								left: auto;
+								right: 150px;
+							}
+						}
+					}
+				}
+
+				.bullets {
+					display: none;
+					position: absolute;
+					bottom: 100%;
+					width: 500px;
+					left: 0;
+					border: 1px solid #bbb;
+					margin-bottom: -1px;
+					@media (max-width: 768px) {
+						width: 200%;
+					}
+					@media (max-width: 480px) {
+						width: 100%;
+					}
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: -10px;
+						width: 20px;
+						height: 20px;
+						left: 120px;
+						border: 1px solid #bbb;
+						background: #fff;	
+						transform: rotate(-45deg);
+					}
+					.bullets-inner {
+						padding: 20px;
+						background: #fff;
+						z-index: 9;		
+						position: relative;	
+						.close {
+							position: absolute;
+							top: 5px;
+							right: 5px;
+							width: 20px;
+							height: 20px;
+							cursor: pointer;
+							&:before, &:after {
+								content: '';
+							    display: block;
+							    width: 16px;
+							    height: 2px;
+							    background: #555;
+							    position: absolute;
+							    top: 50%;
+							    left: 50%;
+								transform: translate(-50%,-50%) rotate(-45deg);
+							}
+							&:after {
+								transform: translate(-50%,-50%) rotate(45deg);
+							}
+						}		
+					}
+					ul {
+						font-size: 13px;
+						margin-bottom: 0;
+					}
+				}
 				.block {
 					display: inline-block;
 					width: 88px;
@@ -992,6 +1089,7 @@ a.standalone-link {
 					padding: 15px 15px 0 0;
 					text-align: center;
 					overflow: hidden;
+					cursor: pointer;
 					&:after {
 						content:'';
 						display: inline-block;
@@ -1001,19 +1099,19 @@ a.standalone-link {
 						background-size: 250px auto;
 						margin-top: 12px;
 					}
-					&.planning:after {
+					&.planning-for-success:after {
 						background-position: 0 -250px;
 						width: 48px;
 						margin-top: 8px;
 						height: 60px;
 					}
-					&.social:after {
+					&.social-awareness:after {
 						background-position: 0 -325px;
 						width: 55px;
 					    margin-top: 13px;
 					    height: 50px;					
 					}
-					&.verbal:after {
+					&.verbal-communication:after {
 						background-position: 0 -375px;
 						width: 58px;
 						margin-top: 14px;
@@ -1025,7 +1123,7 @@ a.standalone-link {
 					    height: 50px;					
 						margin-top: 13px;
 					}
-					&.problem:after {
+					&.problem-solving:after {
 						background-position: 0 -500px;
 						width: 53px;
 					    height: 50px;					
@@ -1043,7 +1141,7 @@ a.standalone-link {
 					font-family: $skinny-font;
 					font-weight: 700;
 					text-transform: uppercase;
-
+					cursor: pointer;
 				}
 			}
 		}
@@ -2925,28 +3023,40 @@ a.standalone-link {
 }
 #team-bios {
 	.bios {
-		display: flex;
 		.post {
-			width: 50%;
-			padding: 0px 60px;
-			
-			&:nth-child(even) {
-				border-left: 1px solid #ddd;
+			padding: 40px 60px 20px;
+			border-top: 1px solid #ddd;
+			display: flex;
+			align-items: flex-start;
+			&:first-child {
+				border: none;
+				padding-top: 0px;
 			}
+			@media all and (max-width: 480px) {
+				display: block;
+				padding: 30px 20px 20px;
+			}
+
 			.top {
-				display: flex;
-				align-items: center;
+				padding: rem-calc(0 30 0 0);
+				@media all and (max-width: 480px) {
+					padding: 0;
+				}
 				.bio-pic {
 					width: 220px;
-					padding: rem-calc(0 20 0 0);
+					padding: rem-calc(0 0 20);
 					position: relative;
+					@media all and (max-width: 480px) {
+						margin:auto;
+					}
 					img {
 						width: 100%;
 						height: auto;
 						border-radius: 50%;
+						display: inline-block;
 					}
 					.headshot { 
-						display: block;
+						display: inline-block;
 						width: 200px;
 						height: 200px;
 						border-radius: 50%;
@@ -2977,12 +3087,12 @@ a.standalone-link {
 						height: 5px;
 						background: $darker-gray;
 						display: block;
-						margin: 10px 0 10px;
+						margin: 10px auto 10px;
 					}
 				}
 			}
 			.description {
-				margin: 30px 0;
+				margin: 15px 0;
 				text-align: left;
 				p {
 					font-size: 14px;
