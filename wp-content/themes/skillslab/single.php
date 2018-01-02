@@ -13,28 +13,34 @@ get_header(); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php foundationpress_entry_meta(); ?>
-		</header>
-		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-		<div class="entry-content">
+		<div class="blog-left ">
+			<div class="blogpost-entry revealme">
+				<header>
+					<h2 class="entry-title"><?php the_title(); ?></h2>
+					<time class="updated" datetime="' . get_the_time( 'c' ) . '">Posted on <?php echo get_the_date(); ?></time>
+					<p class="byline author">Written by <?php echo get_the_author(); ?></p>
+				</header>
+				<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
+				<div class="entry-content">
 
-		<?php
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-		?>
+				<?php
+					if ( has_post_thumbnail() ) :
+						the_post_thumbnail();
+					endif;
+				?>
 
-		<?php the_content(); ?>
+				<?php the_content(); ?>
+				</div>
+				<footer>
+					<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
+					<p><?php the_tags(); ?></p>
+				</footer>
+			</div>
+			<nav id="post-nav">
+				<div class="post-previous"><?php next_post_link('%link', '&larr; Previous Post'); ?></div>
+				<div class="post-next"><?php previous_post_link('%link', 'Next Post &rarr;'); ?> </div>
+			</nav>
 		</div>
-		<footer>
-			<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-			<p><?php the_tags(); ?></p>
-		</footer>
-		<?php do_action( 'foundationpress_post_before_comments' ); ?>
-		<?php comments_template(); ?>
-		<?php do_action( 'foundationpress_post_after_comments' ); ?>
 	</article>
 <?php endwhile;?>
 

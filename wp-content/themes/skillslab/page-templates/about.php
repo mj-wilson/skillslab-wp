@@ -302,11 +302,20 @@ get_header(); ?>
 				<a href="mailto:raimi.adesalu@esinyc.org"><p><strong>email</strong> raimi.adesalu@esinyc.org</p></a>
 			</div>
 			
-			
 			<div class="col twitter">
 				<a href="https://twitter.com/NYC_Skills_Lab" target="_blank"><p><strong>twitter</strong> @NYC_Skills_Lab</p></a>
 			</div>
+	
+			<div class="col spacer"></div>
 			
+			<div class="col facebook">
+				<a href="https://www.facebook.com/NYCSkillsLab/" target="_blank"><p><strong>facebook</strong></p></a>
+			</div>
+
+			<div class="col linkedin">
+				<a href="https://www.linkedin.com/company/nyc-skills-lab/" target="_blank"><p><strong>linkedin</strong></p></a>
+			</div>
+
 	</div>
 </section>
 

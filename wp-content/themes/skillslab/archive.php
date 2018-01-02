@@ -17,9 +17,20 @@
 
 get_header(); ?>
 
-<div id="page" role="main">
+<!-- Hero Section -->
+<section id="pt-hero" class="hero section" role="main">
+	<div class="content revealme">
+		<div class="centered">
+				<h1>BLOG | <span><?php echo get_the_archive_title(); ?></span></h1>
+		</div>
+	</div>
+</section>
+
+<div id="page" role="main" class="blog">
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
+
+		<div class="blog-left">
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -29,15 +40,17 @@ get_header(); ?>
 		<?php else : ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
+		</div>
+
 		<?php endif; // End have_posts() check. ?>
 
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+		<?php  ?>
 			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+				<div class="post-next"><?php previous_posts_link( __( '&larr;  Newer posts', 'foundationpress' ) ); ?></div>
+				<div class="post-previous"><?php next_posts_link( __( 'Older posts  &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
-		<?php } ?>
+		<?php  ?>
 
 	</article>
 	<?php get_sidebar(); ?>

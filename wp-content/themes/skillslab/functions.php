@@ -69,3 +69,21 @@ function get_opengraph_image() {
  }
  return $ogimage;
 }
+
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+            $title = single_cat_title( 'categorized under: ', false );
+
+        } elseif ( is_tag() ) {
+
+            $title = single_tag_title( '', false );
+
+        } elseif ( is_month() ) {
+        $title = 'monthly archives: ' . get_the_date( _x( 'F Y', 'monthly archives date format' ) );
+        }
+
+    return $title;
+
+});

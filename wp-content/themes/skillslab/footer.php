@@ -18,6 +18,11 @@
 			<footer id="footer">
 			<div class="content">
 			<p>Copyright &copy; NYC Skills Lab <?php echo date('Y'); ?>, All rights reserved.</p><p class="right"><a href="/about/#more-info">Contact</a>  |  <a href="/Partners">Partners</a>  |  <a href="/blog">Blog</a></p>
+						<p class="social">				
+				<a class="facebook" href="https://www.facebook.com/NYCSkillsLab/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a class="linkedin" href="https://www.linkedin.com/company/nyc-skills-lab/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+			</p>
+
 			</div>
 			</footer>
 		</div>

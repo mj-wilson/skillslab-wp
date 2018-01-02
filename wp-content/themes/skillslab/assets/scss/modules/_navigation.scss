@@ -54,7 +54,7 @@
         font-size: rem-calc(17);
         line-height: 32px;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.01em;
         text-shadow: 1px 1px 0 #fff;
         border-bottom: 4px solid rgba(0,0,0,0);
         padding: 0;
@@ -84,27 +84,20 @@
       }
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a {
-      background: $blue;
-      color: #fff;
-      text-shadow: none;
+      //background: $blue;
+      color:$gray;
       line-height: 40px;
       height: 40px;
-      padding: rem-calc(0 40 0 15);
+      padding: rem-calc(0 10 0 0);
       margin-top: -4px;
       @include transition(opacity .3s ease);
       &:after {
         content:'\f0d7';
         display: block;
         font: 15px/21px FontAwesome;
-        width: 20px;
-        padding-left: 2px;
-        height: 20px;
-        border-radius: 50%;
-        border:none;
-        background: #5987ad;
-        margin-top: -8px;
-        text-align: center;
-        right: 10px;
+        margin-top: -9px;
+        border: none;
+        right: 6px;
       }
       &:hover {
         opacity: 0.7;
@@ -114,7 +107,7 @@
       border: 1px solid #ddd;
       left: 0;
       right: auto;
-      margin: 0;
+      margin: -8px 0 0 0;
       padding: rem-calc(10 20);
       li {
         margin: 0;
@@ -125,7 +118,7 @@
           font-family: $body-font-family;
           font-size: 12px;
           color: $gray;
-          line-height: 2em;
+          line-height: 2.5em;
           padding-top:  1px;
           white-space: nowrap;
           letter-spacing: 0;
