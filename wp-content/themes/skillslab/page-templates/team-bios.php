@@ -43,7 +43,9 @@ get_header(); ?>
 							<?php } ?>
 
 					 	</div>
-				 		<h3 class="title"><?php the_title(); ?></h3>
+				 		<h3 class="title"><?php the_title(); ?>
+				 			<span><?php the_field('title'); ?></span>
+				 		</h3>
 					</div>
 				 	<div class="description">
 				 		

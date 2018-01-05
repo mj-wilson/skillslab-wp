@@ -271,7 +271,7 @@ if ( $posts != '' ) :
 			<?php endif; ?>
 
 			</div>
-			<a class="standalone-link" href="/about">view all <i class="fa fa-chevron-right"></i></a>
+			<a class="standalone-link" href="/about">view about page <i class="fa fa-chevron-right"></i></a>
 
 		</div>
 	</div>

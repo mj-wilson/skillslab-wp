@@ -607,7 +607,7 @@ h1 {
 	.col-holder {
 		padding: 0 rem-calc(100);
 		.quarter {
-			width: 25%;
+			width: 33.3%;
 			float:left;
 			text-align: center;
 			padding: rem-calc(0 0 30);
@@ -1090,41 +1090,40 @@ a.standalone-link {
 					text-align: center;
 					overflow: hidden;
 					cursor: pointer;
-					&:after {
+					svg {
 						content:'';
 						display: inline-block;
 						width: 42px;
 						height: 55px;
-						background: url('../images/sprites.png') 0 -175px no-repeat;
-						background-size: 250px auto;
 						margin-top: 12px;
+						fill: #c0308e;
 					}
-					&.planning-for-success:after {
-						background-position: 0 -250px;
+					&.planning-for-success svg{
+						fill: #1aa1db;
 						width: 48px;
 						margin-top: 8px;
 						height: 60px;
 					}
-					&.social-awareness:after {
-						background-position: 0 -325px;
+					&.social-awareness svg {
+						fill: #ee5530;
 						width: 55px;
 					    margin-top: 13px;
 					    height: 50px;					
 					}
-					&.verbal-communication:after {
-						background-position: 0 -375px;
+					&.verbal-communication svg {
+						fill: #15994f; 
 						width: 58px;
 						margin-top: 14px;
 					    height: 50px;					
 					}
-					&.collaboration:after {
-						background-position: 0 -425px;
+					&.collaboration svg {
+						fill: #a0ac42;
 						width: 50px;
 					    height: 50px;					
 						margin-top: 13px;
 					}
-					&.problem-solving:after {
-						background-position: 0 -500px;
+					&.problem-solving svg {
+						fill: #393532;
 						width: 53px;
 					    height: 50px;					
 						margin-top: 11px;
@@ -1142,6 +1141,7 @@ a.standalone-link {
 					font-weight: 700;
 					text-transform: uppercase;
 					cursor: pointer;
+					text-decoration: underline;
 				}
 			}
 		}
@@ -3111,6 +3111,12 @@ a.standalone-link {
 					font-size: rem-calc(20);
 					color: $darker-gray;
 					display: inline-block;
+					span {
+						font-weight: 400;
+						font-size: 14px;
+						display: block;
+						text-transform: none;
+					}
 					&:after {
 						content:'';
 						width: 70%;
@@ -3264,6 +3270,9 @@ a.standalone-link {
 				color: $dark-blue;
 				font-weight: bold;
 			}
+		}
+		.blog-image {
+			margin: 15px 0 30px 0
 		}
 	}
 	#post-nav {

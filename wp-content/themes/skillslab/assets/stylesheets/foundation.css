@@ -7180,7 +7180,7 @@ h1 {
   #partner .col-holder {
     padding: 0 6.25rem; }
     #partner .col-holder .quarter {
-      width: 25%;
+      width: 33.3%;
       float: left;
       text-align: center;
       padding: 0 0 1.875rem; }
@@ -7601,36 +7601,35 @@ a.standalone-link {
         text-align: center;
         overflow: hidden;
         cursor: pointer; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block:after {
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block svg {
           content: '';
           display: inline-block;
           width: 42px;
           height: 55px;
-          background: url("../images/sprites.png") 0 -175px no-repeat;
-          background-size: 250px auto;
-          margin-top: 12px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.planning-for-success:after {
-          background-position: 0 -250px;
+          margin-top: 12px;
+          fill: #c0308e; }
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.planning-for-success svg {
+          fill: #1aa1db;
           width: 48px;
           margin-top: 8px;
           height: 60px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.social-awareness:after {
-          background-position: 0 -325px;
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.social-awareness svg {
+          fill: #ee5530;
           width: 55px;
           margin-top: 13px;
           height: 50px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.verbal-communication:after {
-          background-position: 0 -375px;
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.verbal-communication svg {
+          fill: #15994f;
           width: 58px;
           margin-top: 14px;
           height: 50px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.collaboration:after {
-          background-position: 0 -425px;
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.collaboration svg {
+          fill: #a0ac42;
           width: 50px;
           height: 50px;
           margin-top: 13px; }
-        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.problem-solving:after {
-          background-position: 0 -500px;
+        .page-template-about .section:not(#about-hero)#skills-framework .blocks .block-holder .block.problem-solving svg {
+          fill: #393532;
           width: 53px;
           height: 50px;
           margin-top: 11px; }
@@ -7645,7 +7644,8 @@ a.standalone-link {
         font-family: "Oswald", sans-serif;
         font-weight: 700;
         text-transform: uppercase;
-        cursor: pointer; }
+        cursor: pointer;
+        text-decoration: underline; }
   .page-template-about .section:not(#about-hero)#performance-tasks {
     background-image: linear-gradient(185deg, #7fb34b, #72a53f);
     color: #fff; }
@@ -9455,6 +9455,11 @@ a.standalone-link {
       font-size: 1.25rem;
       color: #222222;
       display: inline-block; }
+      #team-bios .bios .post .top h3 span {
+        font-weight: 400;
+        font-size: 14px;
+        display: block;
+        text-transform: none; }
       #team-bios .bios .post .top h3:after {
         content: '';
         width: 70%;
@@ -9738,6 +9743,8 @@ a.standalone-link {
       #page.blog .blogpost-entry p a, #single-post .blogpost-entry p a {
         color: #4f7894;
         font-weight: bold; }
+    #page.blog .blogpost-entry .blog-image, #single-post .blogpost-entry .blog-image {
+      margin: 15px 0 30px 0; }
   #page.blog #post-nav, #single-post #post-nav {
     display: -ms-flexbox;
     display: flex;

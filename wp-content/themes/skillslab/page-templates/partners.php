@@ -25,7 +25,46 @@ get_header(); ?>
 			
 			<div class="cat-container clear">
 				<div class="left revealme">
-					<h2>Our Sponsor</h2>
+					<h2>Funder / Manager</h2>
+				</div>
+				<div class="right">
+				<?php 
+				$args = array(
+				    'posts_per_page' => -1,
+				    'post_type' => 'partner',
+				    'tax_query' => array(
+				        array(
+				            'taxonomy' => 'partner_type',
+				            'field' => 'slug',
+				            'terms' => 'nyc-doe'
+				        )
+				    )
+				);
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); 
+					?>
+				 	<div class="post revealme">
+					 	<div class="logo">
+					 		<?php  if ( has_post_thumbnail() ) {
+								the_post_thumbnail();
+							} ?>
+
+					 	</div>
+					 	<div class="description">
+					 		<div class="title"><?php the_title(); ?></div>
+					 		<?php the_content(); ?>
+					 		<?php $url = get_field('partner_website_url'); 					 		
+				            if($url){ ?>
+								<a target="_blank" href="<?php echo $url; ?>" class="standalone-link">view partner website <i class="fa fa-chevron-right"></i></a>
+							<?php } ?>
+					 	</div>
+				 	</div>
+				<?php endwhile; ?>
+			 	</div>
+			</div><!-- end .cat-container -->
+			<div class="cat-container clear">
+				<div class="left revealme">
+					<h2>Funder</h2>
 				</div>
 				<div class="right">
 				<?php 
@@ -65,7 +104,7 @@ get_header(); ?>
 
 			<div class="cat-container clear">
 				<div class="left revealme">
-					<h2>Industry Partners</h2>
+					<h2>Partners</h2>
 				</div>
 				<div class="right">
 				<?php 
@@ -77,7 +116,7 @@ get_header(); ?>
 				        array(
 				            'taxonomy' => 'partner_type',
 				            'field' => 'slug',
-				            'terms' => 'industry-partners',
+				            'terms' => 'partners',
 				        )
 				    )
 				);

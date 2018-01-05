@@ -102,7 +102,10 @@ get_header(); ?>
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 						
 						<div class="block-holder revealme">
-							<div class="block <?php echo $post->post_name; ?>"></div>
+							<div class="block <?php echo $post->post_name; ?>">
+								<?php $file =  $post->post_name . '.svg';
+								get_template_part('template-parts/inline',  $file ); ?>
+							</div>
 							<div class="block-label"><?php the_title(); ?></div>
 							<div class="bullets">
 								<div class="bullets-inner">
