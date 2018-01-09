@@ -19,6 +19,7 @@ get_header(); ?>
 					<h2 class="entry-title"><?php the_title(); ?></h2>
 					<time class="updated" datetime="' . get_the_time( 'c' ) . '">Posted on <?php echo get_the_date(); ?></time>
 					<p class="byline author">Written by <?php echo get_the_author(); ?></p>
+					<?php the_category(); ?>
 				</header>
 				<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 				<div class="entry-content">

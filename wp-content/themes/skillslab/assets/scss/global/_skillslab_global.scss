@@ -3263,6 +3263,27 @@ a.standalone-link {
 				margin-right: 9px;
 				padding-right: 12px;
 			}
+			ul.post-categories {
+				border-left: 1px solid #ddd;
+				margin: 0 0 0 11px;
+				padding-left: 14px;
+				display: inline-block;
+				list-style: none;
+				li {
+					display: inline-block;
+					margin: 0 10px 0 0;
+					a {
+						display: block;
+						background: $green;
+						color: #fff;
+						text-transform: uppercase;
+						font-size: 12px;
+						padding: 5px 8px 4px;
+					    line-height: 1em;
+					    font-weight: bold;
+					}
+				}
+			}
 		}
 		p {
 			line-height: 1.75em;

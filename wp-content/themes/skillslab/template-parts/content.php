@@ -17,6 +17,7 @@
 
 		<time class="updated" datetime="' . get_the_time( 'c' ) . '">Posted on <?php echo get_the_date(); ?></time>
 		<p class="byline author">Written by <?php echo get_the_author(); ?></p>
+		<?php the_category(); ?>
 
 	</header>
 	<div class="entry-content">

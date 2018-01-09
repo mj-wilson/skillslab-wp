@@ -9738,6 +9738,24 @@ a.standalone-link {
       border-right: 1px solid #ddd;
       margin-right: 9px;
       padding-right: 12px; }
+    #page.blog .blogpost-entry header ul.post-categories, #single-post .blogpost-entry header ul.post-categories {
+      border-left: 1px solid #ddd;
+      margin: 0 0 0 11px;
+      padding-left: 14px;
+      display: inline-block;
+      list-style: none; }
+      #page.blog .blogpost-entry header ul.post-categories li, #single-post .blogpost-entry header ul.post-categories li {
+        display: inline-block;
+        margin: 0 10px 0 0; }
+        #page.blog .blogpost-entry header ul.post-categories li a, #single-post .blogpost-entry header ul.post-categories li a {
+          display: block;
+          background: #7fb34b;
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 12px;
+          padding: 5px 8px 4px;
+          line-height: 1em;
+          font-weight: bold; }
     #page.blog .blogpost-entry p, #single-post .blogpost-entry p {
       line-height: 1.75em; }
       #page.blog .blogpost-entry p a, #single-post .blogpost-entry p a {
