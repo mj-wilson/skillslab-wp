@@ -25,6 +25,7 @@ get_header(); ?>
 			
 			<div class="cat-container clear">
 				<div class="left revealme">
+					<h2></h2>
 				</div>
 				<div class="right">
 				<?php 
